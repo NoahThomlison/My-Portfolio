@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import ReactFullpage from '@fullpage/react-fullpage';
+import {Container, Box, Paper} from '@mui/material';
+import navBar from './navBar.jsx';
+import Intro from './Intro.jsx'
+import About from './About.jsx'
+import Work from './Work.jsx'
+import './App.css'
 
 function App() {
+
+  const anchors = ["Intro", "About", "Work"];
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Box className="navbar">navbar</Box>
+      <ReactFullpage
+      anchors={anchors}
+      licenseKey = {'YOUR_KEY_HERE'}
+      scrollingSpeed = {1000} /* Options here */
+      scrollHorizontally = {true}  /* Because we are using the extension */
+      scrollHorizontallyKey = {'YOUR KEY HERE'}
+      paddingTop = {"10px"}
+      dragAndMove = {true}
+      navigation= {true}
+      navigationTooltips={anchors}
+
+      render={({ state, fullpageApi }) => {
+        return (
+          <div>
+            <ReactFullpage.Wrapper >
+              <div className="">
+                <div className="section">
+                  <Intro></Intro>
+                </div>
+                <div className="section">
+                  <About></About>
+                </div>
+                <div className="section">
+                  <Work></Work>
+                </div>
+              </div>
+            </ReactFullpage.Wrapper>
+          </div>
+        );
+      }}
+      />
     </div>
   );
 }
 
 export default App;
+
