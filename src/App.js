@@ -5,6 +5,7 @@ import Intro from './Intro.jsx'
 import About from './About.jsx'
 import Work from './Work.jsx'
 import './App.css'
+import {projects} from './data.js'
 
 function App() {
 
@@ -29,7 +30,7 @@ function App() {
         return (
           <div>
             <ReactFullpage.Wrapper >
-              <div className="">
+              <div className="heroImage">
                 <div className="section">
                   <Intro></Intro>
                 </div>
@@ -37,7 +38,7 @@ function App() {
                   <About></About>
                 </div>
                 <div className="section">
-                  <Work></Work>
+                  <Work projects={projects}></Work>
                 </div>
               </div>
             </ReactFullpage.Wrapper>
