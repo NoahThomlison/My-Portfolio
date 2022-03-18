@@ -9,8 +9,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function NavBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+    <Box sx={{ flexGrow: 1, height: "50px", position: "absolute", zIndex: "1", width: 1, opacity: "0.9"}}>
+      <AppBar position="static" sx={{ backgroundColor: "#000000"}}>
         <Toolbar>
           <IconButton
             size="large"
