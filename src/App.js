@@ -1,6 +1,6 @@
 import ReactFullpage from '@fullpage/react-fullpage';
 import {Container, Box, Paper} from '@mui/material';
-import navBar from './navBar.jsx';
+import NavBar from './navBar.jsx';
 import Intro from './Intro.jsx'
 import About from './About.jsx'
 import Work from './Work.jsx'
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div>
-      <Box className="navbar">navbar</Box>
+      <NavBar></NavBar>
       <ReactFullpage
       anchors={anchors}
       licenseKey = {'YOUR_KEY_HERE'}
