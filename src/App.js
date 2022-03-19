@@ -4,6 +4,7 @@ import NavBar from './navBar.jsx';
 import Intro from './Intro.jsx'
 import About from './About.jsx'
 import Work from './Work.jsx'
+import Filter from './Filter.jsx'
 import './App.css'
 import {projects} from './data.js'
 
@@ -38,6 +39,7 @@ function App() {
                   <About></About>
                 </div>
                 <div className="section">
+                  <Filter projects={projects}></Filter>
                   <Work projects={projects}></Work>
                 </div>
               </div>
