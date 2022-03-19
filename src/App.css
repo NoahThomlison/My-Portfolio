@@ -55,3 +55,5 @@
   background-color: aqua;
   opacity: 0.8;
 }
+
+body.fp-viewing-Work .css-17p7xjp-MuiPaper-root-MuiAppBar-root { display:none; }
