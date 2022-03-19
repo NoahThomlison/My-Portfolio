@@ -4,7 +4,7 @@ export const projects = [
     description: "Online marketplace that connects people with musical instruments they want to rent out to people who want to rent instruments.", 
     techStack: ["Mongo", "Express", "React", "Node.js", "Bootstrap", "MUI", "Google Maps API"],
     githubLink: "https://noahthomlison.github.io/JamSpace/",
-    image: ["https://github.com/NoahThomlison/JamSpace/blob/master/screenshots/Home_Page.gif"],
+    image: ["https://github.com/NoahThomlison/JamSpace/blob/master/screenshots/Home_Page.gif?raw=true"],
   },
   {
     title: "TinyApp ",
@@ -32,7 +32,7 @@ export const projects = [
     description: "LightBNB is an Lighthouse Labs AirBNB clone", 
     techStack: ["JS", "SASS", "Node.js", "Express", "PostgreSQL"],
     githubLink: "noahthomlison.github.io/lightbnb/",
-    image: ["https://github.com/NoahThomlison/LightBnB/blob/master/LightBNB.gif"],
+    image: ["https://noahthomlison.github.io/LightBnB/LightBNB.gif"],
   },
   {
     title: "Scheduler",
