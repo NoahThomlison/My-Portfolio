@@ -4,14 +4,14 @@ function Work(props) {
   const {projects} = props
   console.log(projects)
   return (
-    <Container sx={{display: "Flex"}}>
+    <Box sx={{display: "Flex", flexWrap: "wrap", padding: "100px, 10px, 0px, 10px"}}>
       {projects.map((project) => {
         return(
-          <Card sx={{ maxWidth: 345, margin: "10px" }}>
+          <Card sx={{ maxWidth: 300, minWidth: 200, margin: "10px", height: "300px" }}>
             <CardMedia
               component="img"
               height="140"
-              image="/static/images/cards/contemplative-reptile.jpg"
+              image={project.image}
               alt="green iguana"
             />
             <CardContent>
@@ -21,15 +21,17 @@ function Work(props) {
               <Typography variant="body2" color="text.secondary">
               {project.description}
               </Typography>
+              <Typography variant="body2" color="text.secondary">
+              {project.stack}
+              </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
+              <Button size="small">View on Github</Button>
             </CardActions>
           </Card>
         )
       })}
-    </Container>
+    </Box>
   )
 }
 
