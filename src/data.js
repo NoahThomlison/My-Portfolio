@@ -42,7 +42,7 @@ export const projects = [
     image: ["https://user-images.githubusercontent.com/80222250/144094594-abfc858f-0c51-424d-aa53-9bbd9f70eac8.png"],
   },
   {
-    title: "",
+    title: "Smart-To-Do-List",
     description: "The Smart To Do List is a self sorting to do list where a user can enter a keyword/task and the app will sort it into a predefined category", 
     techStack: ["JS", "EJS", "Express", "Node.js", "Wikipedia API"],
     githubLink: "https://github.com/NoahThomlison/SmartToDoList",
