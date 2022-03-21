@@ -9,7 +9,7 @@ export const projects = [
   {
     title: "TinyApp ",
     description: "TinyApp is a full stack web application built with Node and Express that allows users to shorten long URLs", 
-    techStack: ["JavaScript", "Express", "Node.js", "EJS"],
+    techStack: ["JS", "Express", "Node.js", "EJS"],
     githubLink: "https://noahthomlison.github.io/tinyapp/",
     image: ["https://noahthomlison.github.io/tinyapp/TinyApp.gif"],
   },
