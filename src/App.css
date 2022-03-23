@@ -42,6 +42,11 @@
   background-size: cover;
 }
 
+.heroImageAlt {
+  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url("/src/images/Picture2.jpg");;
+  background-size: cover;
+}
+
 .padding{
   
 }
