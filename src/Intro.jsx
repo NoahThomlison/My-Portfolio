@@ -3,8 +3,7 @@ import {Container, Box, Paper, Typography} from '@mui/material';
 
 const Intro = () => {
   return (
-    <Container>
-      {/* <Paper sx={{padding: "20px", top: "0px"}}> */}
+    <Container sx={{position: "relative", bottom: "150px", color:"#FFFFFF"}}>
         <Typography variant="h1">
           Hi, Im Noah.
         </Typography>
@@ -14,7 +13,6 @@ const Intro = () => {
         <Typography variant="h4">
           JS, React, Python, Ruby.        
         </Typography>
-      {/* </Paper> */}
     </Container>
   );
 };
