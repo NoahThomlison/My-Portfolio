@@ -1,11 +1,12 @@
 import {Container, Typography, CardMedia, Card, CardActions, CardContent, Button, Box, Paper} from '@mui/material';
 
-function Work(props) {
-  const {projects} = props
-  console.log(projects)
+function Project(props) {
+  const {projects, filter} = props
+  
   return (
     <Box sx={{display: "Flex", flexWrap: "wrap", padding: "100px, 10px, 0px, 10px", justifyContent: "center"}}>
       {projects.map((project) => {
+        if (project.techStack.includes(filter) || filter === ""){
         return(
           <Card sx={{ maxWidth: 300, minWidth: 200, margin: "10px", height: "300px" }}>
             <CardMedia
@@ -35,9 +36,9 @@ function Work(props) {
             </Box>
           </Card>
         )
-      })}
+      }})}
     </Box>
   )
 }
 
-export default Work;
+export default Project;

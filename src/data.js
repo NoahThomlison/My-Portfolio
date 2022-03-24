@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "JamSpace",
     description: "Online marketplace that connects people with musical instruments they want to rent out to people who want to rent instruments.", 
-    techStack: ["Mongo", "Express", "React", "Node.js", "Bootstrap", "MUI", "Google Maps API"],
+    techStack: ["MongoDB", "Express", "React", "Node.js", "Bootstrap", "MUI", "API"],
     githubLink: "https://noahthomlison.github.io/JamSpace/",
     image: ["https://github.com/NoahThomlison/JamSpace/blob/master/screenshots/Home_Page.gif?raw=true"],
   },
@@ -44,7 +44,7 @@ export const projects = [
   {
     title: "Smart-To-Do-List",
     description: "The Smart To Do List is a self sorting to do list where a user can enter a keyword/task and the app will sort it into a predefined category", 
-    techStack: ["JS", "EJS", "Express", "Node.js", "Wikipedia API"],
+    techStack: ["JS", "EJS", "Express", "Node.js", "API"],
     githubLink: "https://github.com/NoahThomlison/SmartToDoList",
     image: ["https://user-images.githubusercontent.com/80222250/139961316-9f2cf2d0-fee7-4b99-ae1b-5ba287cf6ea3.png"],
   },

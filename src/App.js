@@ -3,15 +3,13 @@ import {Container, Box, Paper} from '@mui/material';
 import NavBar from './navBar.jsx';
 import Intro from './Intro.jsx'
 import About from './About.jsx'
-import Work from './Work.jsx'
-import Filter from './Filter.jsx'
+import ProjectList from './ProjectList.jsx'
 import './App.css'
 import {projects} from './data.js'
 
 function App() {
 
   const anchors = ["Intro", "About", "Work"];
-
 
   return (
     <div>
@@ -26,21 +24,22 @@ function App() {
       dragAndMove = {true}
       navigation= {true}
       navigationTooltips={anchors}
+      scrollBar= {true}
+      scrollOverflow= {true}
 
       render={({ state, fullpageApi }) => {
         return (
           <div>
             <ReactFullpage.Wrapper >
-              <div className="heroImage">
-                <div className="section">
+              <div className="heroImageRemoved ">
+                <div className="section heroImageAlt">
                   <Intro></Intro>
                 </div>
                 <div className="section">
                   <About></About>
                 </div>
                 <div className="section">
-                  <Filter projects={projects}></Filter>
-                  <Work projects={projects}></Work>
+                  <ProjectList projects={projects}></ProjectList>
                 </div>
               </div>
             </ReactFullpage.Wrapper>
