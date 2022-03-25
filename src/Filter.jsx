@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 function Filter(props) {
 
   const {setFilter} = props
-  let stackList = ["React", "JS", "Python", "Ruby", "Rails", "MongoDB", "Express", "Node.js", "Bootstrap", "MUI", "API", "SASS"];
+  let stackList = ["All", "React", "JS", "Python", "Ruby", "Rails", "MongoDB", "Express", "Node.js", "Bootstrap", "MUI", "API", "SASS"];
 
   return (
     <Box sx={{display: "flex", justifyContent: "center"}}>
