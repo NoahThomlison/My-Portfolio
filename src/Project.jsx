@@ -4,11 +4,11 @@ function Project(props) {
   const {projects, filter} = props
   
   return (
-    <Box sx={{display: "Flex", flexWrap: "wrap", padding: "100px, 10px, 0px, 10px", justifyContent: "center"}}>
+    <Box sx={{display: "Flex", flexWrap: "wrap", padding: "100px, 10px, 0px, 10px", justifyContent: "center", height: "90%"}}>
       {projects.map((project) => {
-        if (project.techStack.includes(filter) || filter === ""){
+        if (project.techStack.includes(filter) || filter === "All"){
         return(
-          <Card sx={{ maxWidth: 300, minWidth: 200, margin: "10px", height: "300px" }}>
+          <Card sx={{ width: 400, minWidth: 300, margin: "10px", height: "300px" }}>
             <CardMedia
               component="img"
               height="140"
@@ -19,11 +19,13 @@ function Project(props) {
               <Typography gutterBottom variant="h6" component="div">
               {project.title}
               </Typography>
-              {/* <Typography variant="body2" color="text.secondary">
-              {project.description}
-              </Typography> */}
               <Typography variant="body2" color="text.secondary">
-              Stack: {project.techStack}
+              {project.description}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+              <br></br>
+              <strong>Stack:</strong> {project.techStack.map((stack, index) => {
+                return(stack + " ")})}
               </Typography>
             </CardContent>
             <Box sx={{display:"flex", justifyContent: "center", bottom: "0px", position:"relative"}}>
