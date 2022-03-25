@@ -1,5 +1,5 @@
 import ReactFullpage from '@fullpage/react-fullpage';
-import {Container, Box, Paper} from '@mui/material';
+import {Container, Box, Paper, Button} from '@mui/material';
 import NavBar from './navBar.jsx';
 import Intro from './Intro.jsx'
 import About from './About.jsx'
@@ -33,12 +33,12 @@ function App() {
             <ReactFullpage.Wrapper >
               <div className="heroImageRemoved ">
                 <div className="section heroImageAlt">
-                  <Intro></Intro>
+                  <Intro fullpageApi={fullpageApi}></Intro>
                 </div>
-                <div className="section">
+                <div className="section aboutMeImage">
                   <About></About>
                 </div>
-                <div className="section">
+                <div className="section aboutMeImage">
                   <ProjectList projects={projects}></ProjectList>
                 </div>
               </div>
