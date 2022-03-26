@@ -32,7 +32,7 @@ function App() {
           <div>
             <ReactFullpage.Wrapper >
               <div className="heroImageRemoved ">
-                <div className="section heroImageAlt">
+                <div className="section">
                   <Intro fullpageApi={fullpageApi}></Intro>
                 </div>
                 <div className="section aboutMeImage">
