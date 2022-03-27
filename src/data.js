@@ -24,14 +24,14 @@ export const projects = [
     title: "Tweeter",
     description: "Tweeter is a simple, single-page Twitter clone. ", 
     techStack: ["HTML", "CSS", "JS", "jQuery", "Ajax", "Node.js", "Express", "MongoDB"],
-    githubLink: "noahthomlison.github.io/tweeter/",
+    githubLink: "https://noahthomlison.github.io/tweeter/",
     image: ["https://user-images.githubusercontent.com/80222250/157595393-7c51d08e-bd96-4151-b718-0920cd30c165.gif"],
   },
   {
     title: "LightBnB",
     description: "LightBNB is an Lighthouse Labs AirBNB clone", 
     techStack: ["JS", "SASS", "Node.js", "Express", "PostgreSQL"],
-    githubLink: "noahthomlison.github.io/lightbnb/",
+    githubLink: "https://noahthomlison.github.io/LightBnB/",
     image: ["https://noahthomlison.github.io/LightBnB/LightBNB.gif"],
   },
   {
