@@ -3,14 +3,22 @@ import Filter from "./Filter"
 import Project from "./Project"
 import React, { useState } from 'react';
 
-function ProjectList(props) {
-  const {projects} = props
+function ProjectList({projects}) {
+  console.log(projects)
   const [filter, setFilter] = useState("All");
+
+  const projectsToRender = projects.filter(function (project) {
+    return((project.techStack.includes(filter) || filter === "All"))
+  })
 
   return (
     <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", marginTop: "75px"}}>
       <Filter sx={{justifySelf: "flex-start"}}projects={projects} setFilter={setFilter}></Filter>
-      <Project projects={projects} filter={filter}></Project>
+      <Box sx={{display: "Flex", flexWrap: "wrap", padding: "100px, 10px, 0px, 10px", justifyContent: "center", height: "90%"}}>
+      {projectsToRender.map((project) => {
+        return(<Project project={project}></Project>)
+      })}
+      </Box>
     </Box>
   )
 }
