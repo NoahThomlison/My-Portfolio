@@ -12,7 +12,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 export default function NavBar() {
 
   return (
-    <Box sx={{ flexGrow: 1, position: "absolute", zIndex: "1", width: 1, opacity: "0.9"}}>
+    <Box sx={{ flexGrow: 1, position: "fixed", zIndex: "1", width: 1, opacity: "0.9"}}>
       <AppBar position="static" sx={{ backgroundColor: "#000000", alignItems: "flex-end"}}>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -33,8 +33,7 @@ export default function NavBar() {
                 <LinkedInIcon sx={{color: "#FFFFFF"}}/>
               </a>
             </IconButton>
-    
-    
+        
             <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
               <a href="https://resume.creddle.io/resume/f5bhq4mil77">
                 <ArticleIcon sx={{color: "#FFFFFF"}}/>
