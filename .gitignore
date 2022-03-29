@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+src/Experiance.jsx
+src/experianceData.js
+src/Timeline.jsx
+src/ContactForm.jsx
