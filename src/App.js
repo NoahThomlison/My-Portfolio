@@ -4,11 +4,8 @@ import NavBar from './navBar.jsx';
 import Intro from './Intro.jsx'
 import About from './About.jsx'
 import ProjectList from './ProjectList.jsx'
-import Timeline from "./Timeline.jsx"
-import Experiance from "./Experiance.jsx"
 import './App.css'
 import {projects} from './projectData.js'
-import {experiance} from './experianceData.js'
 
 function App() {
 
@@ -39,11 +36,7 @@ function App() {
                   <Intro fullpageApi={fullpageApi}></Intro>
                 </div>
                 <div className="section aboutMeImage">
-                  {/* <Container>
-                    <Paper>  */}
                       <About></About>
-                    {/* </Paper>
-                  </Container> */}
                 </div>
                 <div className="section aboutMeImage">
                   <ProjectList projects={projects}></ProjectList>
