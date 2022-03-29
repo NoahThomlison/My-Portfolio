@@ -4,83 +4,95 @@ export const projects = [
     description: "Online marketplace that connects people with musical instruments they want to rent out to people who want to rent instruments.", 
     techStack: ["MongoDB", "Express", "React", "Node.js", "Bootstrap", "MUI", "API"],
     githubLink: "https://noahthomlison.github.io/JamSpace/",
-    image: ["https://github.com/NoahThomlison/JamSpace/blob/master/screenshots/Home_Page.gif?raw=true"],
+    image: ["../projectImages&Gifs/Fullsize/JamSpace.gif"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/JamSpace Small.gif"]
   },
   {
     title: "TinyApp ",
     description: "TinyApp is a full stack web application built with Node and Express that allows users to shorten long URLs", 
     techStack: ["JS", "Express", "Node.js", "EJS"],
     githubLink: "https://noahthomlison.github.io/tinyapp/",
-    image: ["https://noahthomlison.github.io/tinyapp/TinyApp.gif"],
+    image: ["./projectImages&Gifs/Fullsize/TinyApp.gif"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/TinyApp Small.gif"]
   },
   {
     title: "Jungle",
     description: "A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. ", 
     techStack: ["Ruby", "Rails", "PostgreSQL", "ActiveRecord"],
     githubLink: "https://noahthomlison.github.io/jungle-rails/",
-    image: ["https://noahthomlison.github.io/jungle-rails/jungleFiltering.gif"],
+    image: ["./projectImages&Gifs/Fullsize/Jungle.gif"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/Jungle Small.gif"]
   },
   {
     title: "Tweeter",
     description: "Tweeter is a simple, single-page Twitter clone. ", 
     techStack: ["HTML", "CSS", "JS", "jQuery", "Ajax", "Node.js", "Express", "MongoDB"],
     githubLink: "https://noahthomlison.github.io/tweeter/",
-    image: ["https://user-images.githubusercontent.com/80222250/157595393-7c51d08e-bd96-4151-b718-0920cd30c165.gif"],
+    image: ["./projectImages&Gifs/Fullsize/Tweeter.gif"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/Tweeter Small.gif"]
   },
   {
     title: "LightBnB",
     description: "LightBNB is an Lighthouse Labs AirBNB clone", 
     techStack: ["JS", "SASS", "Node.js", "Express", "PostgreSQL"],
     githubLink: "https://noahthomlison.github.io/LightBnB/",
-    image: ["https://noahthomlison.github.io/LightBnB/LightBNB.gif"],
+    image: ["./projectImages&Gifs/Fullsize/LightBNB.gif"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/LightBNB Small.gif"]
   },
   {
     title: "Scheduler",
     description: "Interview Scheduler is a single-page application (SPA) that allows users to book technical interviews between students and mentors.", 
     techStack: ["React", "Cypress", "Storybook", "Jest", "Express"],
     githubLink: "https://github.com/NoahThomlison/scheduler",
-    image: ["https://user-images.githubusercontent.com/80222250/144094594-abfc858f-0c51-424d-aa53-9bbd9f70eac8.png"],
+    image: ["./projectImages&Gifs/Fullsize/Scheduler.png"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/Scheduler.png"]
   },
   {
     title: "Smart-To-Do-List",
     description: "The Smart To Do List is a self sorting to do list where a user can enter a keyword/task and the app will sort it into a predefined category", 
     techStack: ["JS", "EJS", "Express", "Node.js", "API"],
     githubLink: "https://github.com/NoahThomlison/SmartToDoList",
-    image: ["https://user-images.githubusercontent.com/80222250/139961316-9f2cf2d0-fee7-4b99-ae1b-5ba287cf6ea3.png"],
+    image: ["./projectImages&Gifs/Fullsize/Smart-To-Do-List.png"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/Smart-To-Do-List.png"]
   },
   {
     title: "MiniProject - Tours",
     description: "Tours are generated from an API, user can expand for more information or delete from list", 
     techStack: ["React", "API"],
     githubLink: "https://github.com/NoahThomlison/react-mini-project",
-    image: ["https://github.com/NoahThomlison/react-mini-project/blob/main/02-tours/setup/gifs/toursGif.gif?raw=true"],
+    image: ["./projectImages&Gifs/Fullsize/MiniProject - Tours.gif?raw=true"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/MiniProject - Tours Small.gif"]
   },  
   {
     title: "MiniProject - Reviews",
     description: "Customer reviews are rendered from static data file into a carosel that can be rotated or display a random review", 
     techStack: ["React"],
     githubLink: "https://github.com/NoahThomlison/react-mini-project",
-    image: ["https://github.com/NoahThomlison/react-mini-project/blob/main/03-reviews/setup/gifs/reviewsGif.gif?raw=true"],
+    image: ["./projectImages&Gifs/Fullsize/MiniProject - Reviews.gif?raw=true"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/MiniProject - Reviews Small.gif"]
   },  
   {
     title: "MiniProject - Accordion",
     description: "Creates a Q&A accordian, from static data, which can be expanded and collapsed on button click.", 
     techStack: ["React"],
     githubLink: "https://github.com/NoahThomlison/react-mini-project",
-    image: ["https://github.com/NoahThomlison/react-mini-project/blob/main/04-accordion/setup/gifs/accordionGif.gif?raw=true"],
+    image: ["./projectImages&Gifs/Fullsize/MiniProject - Accordion.gif?raw=true"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/MiniProject - Accordion Small.gif"]
   },  
   {
     title: "MiniProject - Menu",
     description: "Creates a menu from static data which can be sorted by various food categories", 
     techStack: ["React"],
     githubLink: "https://github.com/NoahThomlison/react-mini-project",
-    image: ["https://github.com/NoahThomlison/react-mini-project/blob/main/05-menu/setup/gifs/menuGif.gif?raw=true"],
+    image: ["./projectImages&Gifs/Fullsize/MiniProject - Menu.gif?raw=true"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/MiniProject - Menu Small.gif"]
   },
   {
     title: "MiniProject - Tabs",
     description: "Renders work experiance from an API, allows sorting by job", 
     techStack: ["React", "API"],
     githubLink: "https://github.com/NoahThomlison/react-mini-project",
-    image: ["https://github.com/NoahThomlison/react-mini-project/blob/main/06-tabs/setup/gifs/tabsGif.gif?raw=true"],
+    image: ["./projectImages&Gifs/Fullsize/MiniProject - Tab.gif?raw=true"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/MiniProject - Tab Small.gif"]
   },
 ]

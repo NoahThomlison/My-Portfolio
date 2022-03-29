@@ -19,7 +19,7 @@ function ProjectList({projects}) {
             </Box>}
           {projectsToRender.length > 0 &&
             projectsToRender.map((project, index) => {
-              return(<Project project={project} index={index}></Project>)
+              return(<Project project={project} index={index} image={project.image}></Project>)
             })
           }
     </Box>

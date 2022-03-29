@@ -1,13 +1,13 @@
 import {Container, Typography, CardMedia, Card, CardActions, CardContent, Button, Box, Paper, Link} from '@mui/material';
 
 function Project({project, index}) {
-  
+
   return (
     <Card sx={{ width: 350, minWidth: 300, margin: "10px", height: "300px", position: "relative"}}>
       <CardMedia
         component="img"
         height="50%"
-        image={project.image}
+        image= {project.thumbnail}
         alt="green iguana"
       />
       <CardContent>
