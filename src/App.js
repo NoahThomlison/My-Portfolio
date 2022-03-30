@@ -7,6 +7,8 @@ import ProjectList from './ProjectList.jsx'
 import './App.css'
 import {projects} from './projectData.js'
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
+import Filter from "./Filter"
+
 
 function App() {
 
@@ -34,7 +36,6 @@ function App() {
       scrollHorizontallyKey = {'YOUR KEY HERE'}
       paddingTop = {"10px"}
       dragAndMove = {true}
-      // navigation= {true}
       navigationTooltips={anchors}
       scrollBar= {true}
       scrollOverflow= {true}
@@ -48,8 +49,9 @@ function App() {
                   <Intro fullpageApi={fullpageApi} theme={theme}></Intro>
                 </div>
                 <div className="section aboutMeImage">
-                      <About theme={theme}></About>
+                  <About theme={theme}></About>
                 </div>
+                <Filter></Filter>
                 <div className="section aboutMeImage">
                   <ProjectList projects={projects} theme={theme}></ProjectList>
                 </div>
