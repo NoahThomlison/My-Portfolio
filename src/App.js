@@ -6,11 +6,23 @@ import About from './About.jsx'
 import ProjectList from './ProjectList.jsx'
 import './App.css'
 import {projects} from './projectData.js'
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 function App() {
 
   const anchors = ["Intro", "About", "Work"];
+  let theme = createTheme({
 
+  });
+  theme = responsiveFontSizes(theme);
+
+  theme.typography.body1 = {
+  [theme.breakpoints.down('500')]: {
+    fontSize: '.85rem',
+  },
+};
+
+  
   return (
     <div>
       <NavBar></NavBar>
@@ -22,7 +34,7 @@ function App() {
       scrollHorizontallyKey = {'YOUR KEY HERE'}
       paddingTop = {"10px"}
       dragAndMove = {true}
-      navigation= {true}
+      // navigation= {true}
       navigationTooltips={anchors}
       scrollBar= {true}
       scrollOverflow= {true}
@@ -33,13 +45,13 @@ function App() {
             <ReactFullpage.Wrapper >
               <div className="heroImageRemoved ">
                 <div className="section heroImageAlt">
-                  <Intro fullpageApi={fullpageApi}></Intro>
+                  <Intro fullpageApi={fullpageApi} theme={theme}></Intro>
                 </div>
                 <div className="section aboutMeImage">
-                      <About></About>
+                      <About theme={theme}></About>
                 </div>
                 <div className="section aboutMeImage">
-                  <ProjectList projects={projects}></ProjectList>
+                  <ProjectList projects={projects} theme={theme}></ProjectList>
                 </div>
               </div>
             </ReactFullpage.Wrapper>
