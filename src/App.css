@@ -66,10 +66,9 @@
 
 body.fp-viewing-Work .css-1a97yd1{ display:none; }
 
-/* .profilePicture{
-  height: 500px;
-  border-radius: 5px;
-  } */
+body.fp-viewing-About .css-13n3apg-MuiContainer-root{ display:none; }
+body.fp-viewing-Intro .css-13n3apg-MuiContainer-root{ display:none; }
+
 
 @media (max-width: 768px) {
   .profilePicture, .profilePictureBox{
