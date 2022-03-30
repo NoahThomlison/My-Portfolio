@@ -9,7 +9,7 @@ function Filter(props) {
   let stackList = ["All", "React", "JS", "Python", "Ruby", "Rails", "MongoDB", "Express", "Node.js", "Bootstrap", "MUI", "API", "SASS"];
 
   return (
-    <Container>
+    <Container sx={{top: "15px", position: "fixed", zIndex: "10"}}>
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
           <Typography variant="h6">Filters</Typography>
