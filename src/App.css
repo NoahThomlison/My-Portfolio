@@ -43,12 +43,14 @@
 }
 
 .heroImageAlt {
-  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url("/src/images/Picture2.jpg");;
+  background-position: center center;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url("/src/images/Picture2.jpg");;
   background-size: cover;
 }
 
+
 .aboutMeImage {
-  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url("/src/images/CodingBackground.jpg");;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url("/src/images/CodingBackground.jpg");;
   background-size: cover;
 }
 
@@ -64,7 +66,30 @@
 
 body.fp-viewing-Work .css-1a97yd1{ display:none; }
 
-.profilePicture{
+/* .profilePicture{
   height: 500px;
   border-radius: 5px;
+  } */
+
+@media (max-width: 768px) {
+  .profilePicture, .profilePictureBox{
+    display: none;
+    }
+  .buttonAccordian{
+    flex-direction: column;
   }
+}
+
+.profilePicture {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+.buttonAccordian{
+display: flex;
+}
+
+.css-zqcytf-MuiButtonGroup-root{
+  box-shadow: 0;
+}
