@@ -16,15 +16,15 @@ function About({theme}) {
               </Box>
               <Box sx={{border: "black, 1px, solid", paddingLeft: "10px", paddingRight: "10px", paddingTop: "10px"}}>
               <Typography>
-                  I am a recent graduate of a six-month-long boot camp at Lighthouse Labs, where I obtained a diploma in Web Development. I also have a Bachelor's Degree in  Mechanical Engineering from the British Columbia Institute of Technology.
+                I am a recent graduate of a Web Development Diploma program at <a href="https://www.lighthouselabs.ca/">Lighthouse Labs</a>. I also have a Bachelor's Degree in Mechanical Engineering from the <a href="https://www.bcit.ca/programs/mechanical-engineering/">British Columbia Institute of Technology</a>.
               </Typography>
               <br></br>
               <Typography>
-                  Before attending Lighthouse Labs I have worked as a Mechanical Design Engineer for 5 years and have worked in various industries designing consumer goods. This includes sporting goods, motorcycle accessories and commercial cameras. I decided to make a pivot from Mechanical Engineering to Web Development as I    found the speed and ability to rapidly iterate and design when doing coding is I greatly enjoy.
+                Before attending Lighthouse Labs I have worked as a Mechanical Design Engineer for 5 years. Some projects I have been involved in include sporting goods, motorcycle accessories, machinery and commercial cameras. I decided to make a pivot from Mechanical Engineering to Web Development as I found the speed and ability to rapidly iterate and design when doing coding is I greatly enjoy.
               </Typography>          
               <br></br>
               <Typography>
-                  In my free time, I am continuing my studies by learning Python and Django, practicing to hone my skills further in React and refactoring my midterm project,  Smart-To-Do list, to add new functionality. 
+                In my free time, I am continuing my studies by learning Python and Django, practicing to hone my skills further in React and refactoring my midterm project,  Smart-To-Do list, to add new functionality. 
               </Typography>
               </Box>
             </Box>
