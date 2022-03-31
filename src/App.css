@@ -64,10 +64,29 @@
   opacity: 0.8;
 }
 
-body.fp-viewing-Work .css-1a97yd1{ display:none; }
+body.fp-viewing-Work .navBar{ 
+  opacity: 0%;
+  z-index: -2
+  }
 
-body.fp-viewing-About .css-13n3apg-MuiContainer-root{ display:none; }
-body.fp-viewing-Intro .css-13n3apg-MuiContainer-root{ display:none; }
+body.fp-viewing-About .navBar{ 
+  opacity: 90%;
+  transition: opacity 1s;
+  }
+    
+body.fp-viewing-About .filterBar{ 
+  transition: opacity .5s;
+  opacity: 0%;
+  }
+body.fp-viewing-Intro .filterBar{ 
+  transition: opacity .5s;
+  opacity: 0%;
+  }
+body.fp-viewing-Work .filterBar{ 
+  transition: opacity 1s;
+  opacity: 100%;
+  }
+  
 
 
 @media (max-width: 768px) {
@@ -77,12 +96,18 @@ body.fp-viewing-Intro .css-13n3apg-MuiContainer-root{ display:none; }
   .buttonAccordian{
     flex-direction: column;
   }
+  body.fp-viewing-About .navBar{ 
+    opacity: 0%;
+    transition: opacity 1s;
+    }
+      
 }
 
 .profilePicture {
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
+    border-radius: .5em;
 }
 
 .buttonAccordian{
@@ -91,4 +116,15 @@ display: flex;
 
 .css-zqcytf-MuiButtonGroup-root{
   box-shadow: 0;
+}
+
+.underline{
+  border-bottom: rgba(194, 211, 203, 1);
+  /* border-bottom: ( rgba(194, 211, 203, 1), rgba(81, 90, 144, 1) ); */
+
+  border-style: solid;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-width: 2px;
 }
