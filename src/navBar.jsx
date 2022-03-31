@@ -12,7 +12,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 export default function NavBar() {
 
   return (
-    <Box sx={{ flexGrow: 1, position: "fixed", zIndex: "1", width: 1, opacity: "0.9"}}>
+    <Box className="navBar" sx={{ flexGrow: 1, position: "fixed", zIndex: "1", width: 1, }}>
       <AppBar position="static" sx={{ backgroundColor: "#000000", alignItems: "flex-end"}}>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
