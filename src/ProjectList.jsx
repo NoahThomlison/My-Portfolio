@@ -11,9 +11,9 @@ function ProjectList({projects, theme}) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box>
-        {/* <Filter sx={{position: "fixed"}} projects={projects} setFilter={setFilter}></Filter> */}
-        <Box sx={{ display: "Flex", flexWrap: "wrap", padding: "100px, 80px, 0px, 10px", paddingTop: "70px", justifyContent: "center", height: "90%"}}>
+      <Filter projects={projects} setFilter={setFilter}></Filter>
+        <div className="section aboutMeImage">
+          <Box sx={{ display: "Flex", flexWrap: "wrap", padding: "100px, 80px, 0px, 10px", paddingTop: "70px", justifyContent: "center", height: "90%"}}>
             {projectsToRender.length === 0 &&
               <Box sx={{paddingTop: "50px"}}>
                 <Typography variant="h5">Nothing Yet.</Typography>
@@ -23,8 +23,8 @@ function ProjectList({projects, theme}) {
                 return(<Project project={project} index={index} image={project.image}></Project>)
               })
             }
-        </Box>
-      </Box>
+          </Box>
+        </div>
     </ThemeProvider>
   )
 }
