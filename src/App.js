@@ -45,16 +45,9 @@ function App() {
           <div>
             <ReactFullpage.Wrapper >
               <div className="heroImageRemoved ">
-                <div className="section heroImageAlt">
                   <Intro fullpageApi={fullpageApi} theme={theme}></Intro>
-                </div>
-                <div className="section aboutMeImage">
                   <About theme={theme}></About>
-                </div>
-                <Filter></Filter>
-                <div className="section aboutMeImage">
                   <ProjectList projects={projects} theme={theme}></ProjectList>
-                </div>
               </div>
             </ReactFullpage.Wrapper>
           </div>
