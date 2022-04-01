@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "JamSpace",
     description: "Online marketplace that connects people with musical instruments they want to rent out to people who want to rent instruments.", 
-    techStack: ["MongoDB", "Express", "React", "Node.js", "Bootstrap", "MUI", "API"],
+    techStack: ["Featured", "MongoDB", "Express", "React", "Node.js", "Bootstrap", "MUI", "API"],
     githubLink: "https://noahthomlison.github.io/JamSpace/",
     image: ["../projectImages&Gifs/Fullsize/JamSpace.gif"],
     thumbnail: ["../projectImages&Gifs/Thumbnail/JamSpace Small.gif"]
@@ -42,7 +42,7 @@ export const projects = [
   {
     title: "Scheduler",
     description: "Interview Scheduler is a single-page application (SPA) that allows users to book technical interviews between students and mentors.", 
-    techStack: ["React", "Cypress", "Storybook", "Jest", "Express"],
+    techStack: ["Featured", "React", "Cypress", "Storybook", "Jest", "Express"],
     githubLink: "https://github.com/NoahThomlison/scheduler",
     image: ["./projectImages&Gifs/Fullsize/Scheduler.png"],
     thumbnail: ["../projectImages&Gifs/Thumbnail/Scheduler.png"]
@@ -50,7 +50,7 @@ export const projects = [
   {
     title: "Smart-To-Do-List",
     description: "The Smart To Do List is a self sorting to do list where a user can enter a keyword/task and the app will sort it into a predefined category", 
-    techStack: ["JS", "EJS", "Express", "Node.js", "API"],
+    techStack: ["Featured", "JS", "EJS", "Express", "Node.js", "API"],
     githubLink: "https://github.com/NoahThomlison/SmartToDoList",
     image: ["./projectImages&Gifs/Fullsize/Smart-To-Do-List.png"],
     thumbnail: ["../projectImages&Gifs/Thumbnail/Smart-To-Do-List.png"]
