@@ -1,4 +1,4 @@
-import ReactFullpage from '@fullpage/react-fullpage';
+import ReactFullpage, {fullpage_api} from '@fullpage/react-fullpage';
 import {Container, Box, Paper, Button} from '@mui/material';
 import NavBar from './navBar.jsx';
 import Intro from './Intro.jsx'
@@ -30,10 +30,10 @@ function App() {
       <NavBar></NavBar>
       <ReactFullpage
       anchors={anchors}
-      licenseKey = {'YOUR_KEY_HERE'}
+      licenseKey = {'762DB1A2-3D20468B-A03B9177-ACE93B2B'}
       scrollingSpeed = {1000} /* Options here */
       scrollHorizontally = {true}  /* Because we are using the extension */
-      scrollHorizontallyKey = {'YOUR KEY HERE'}
+      scrollHorizontallyKey = {'762DB1A2-3D20468B-A03B9177-ACE93B2B'}
       paddingTop = {"10px"}
       dragAndMove = {true}
       navigationTooltips={anchors}
@@ -47,7 +47,7 @@ function App() {
               <div className="heroImageRemoved ">
                   <Intro fullpageApi={fullpageApi} theme={theme}></Intro>
                   <About theme={theme}></About>
-                  <ProjectList projects={projects} theme={theme}></ProjectList>
+                  <ProjectList fullpage_api={fullpage_api} projects={projects} theme={theme}></ProjectList>
               </div>
             </ReactFullpage.Wrapper>
           </div>

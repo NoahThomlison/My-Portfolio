@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import fullpage_api from "@fullpage/react-fullpage";
 
 function ProjectList({projects, theme}) {
-  const [filter, setFilter] = useState("All");
+  const [filter, setFilter] = useState("Ruby");
   const [expanded, setExpanded] = useState(false);
 
   function accordianClick(state){
@@ -16,7 +16,7 @@ function ProjectList({projects, theme}) {
     e.stopPropagation() 
     setFilter(stack)      
     setExpanded(!expanded)
-    fullpage_api.reBuid()
+    fullpage_api.reBuild();
   }
 
   const projectsToRender = projects.filter(function (project) {
@@ -26,15 +26,15 @@ function ProjectList({projects, theme}) {
   return (
     <ThemeProvider theme={theme}>
       <Filter buttonClick={buttonClick} accordianClick={accordianClick} expanded={expanded} filter={filter}></Filter>
-        <div className="section aboutMeImage">
-          <Box sx={{ display: "Flex", flexWrap: "wrap", padding: "100px, 80px, 0px, 10px", paddingTop: "70px", justifyContent: "center", height: "90%"}}>
+        <div className="section aboutMeImage responsiveHeight">
+          <Box sx={{ display: "Flex", flexWrap: "wrap", paddingTop: "70px", justifyContent: "center", height: "100%", alignContent: "flex-start"}}>
             {projectsToRender.length === 0 &&
               <Box sx={{paddingTop: "50px"}}>
                 <Typography variant="h5">Nothing Yet.</Typography>
               </Box>}
             {projectsToRender.length > 0 &&
               projectsToRender.map((project, index) => {
-                return(<Project project={project} index={index} image={project.image}></Project>)
+                return(<Project key={project} project={project} index={index} image={project.image}></Project>)
               })
             }
           </Box>

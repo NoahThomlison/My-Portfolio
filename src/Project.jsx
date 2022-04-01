@@ -1,11 +1,11 @@
-import {Container, Typography, CardMedia, Card, CardActions, CardContent, Button, Box, Paper, Link} from '@mui/material';
+import {Typography, CardMedia, Card, CardActions, CardContent, Button, Box, Link} from '@mui/material';
 
 function Project({project, index}) {
 
   let techStackList = project.techStack.map((stack, index) => {
     if(stack !== "Featured"){
       if(index === project.techStack.length - 1){
-      return(stack)
+        return(stack)
       }
       else{
         return(stack + ", ")
@@ -17,7 +17,7 @@ function Project({project, index}) {
       <CardMedia
         component="img"
         height="50%"
-        image= {project.thumbnail}
+        image= {project.thumbnail[0]}
         alt="green iguana"
       />
       <CardContent>

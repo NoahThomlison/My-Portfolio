@@ -15,7 +15,7 @@ function Filter({buttonClick, accordianClick, expanded, filter}) {
             <Box sx={{display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-evenly", padding: "5px"}} className="buttonAccordian">
               {stackList.map((stack)=> {
                 return(
-                  <Button onClick={(e)=> buttonClick(e, stack, expanded)} sx={{margin:"2px"}} variant="contained">{stack}</Button>
+                  <Button key={stack} onClick={(e)=> buttonClick(e, stack, expanded)} sx={{margin:"2px"}} variant="contained">{stack}</Button>
                 )})}
             </Box>
         </AccordionDetails>
