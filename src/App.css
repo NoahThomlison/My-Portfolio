@@ -119,12 +119,5 @@ display: flex;
 }
 
 .underline{
-  border-bottom: rgba(194, 211, 203, 1);
-  /* border-bottom: ( rgba(194, 211, 203, 1), rgba(81, 90, 144, 1) ); */
-
-  border-style: solid;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-width: 2px;
+  border-bottom: 2px solid rgba(194, 211, 203, 1)
 }
