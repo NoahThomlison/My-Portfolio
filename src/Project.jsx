@@ -2,6 +2,16 @@ import {Container, Typography, CardMedia, Card, CardActions, CardContent, Button
 
 function Project({project, index}) {
 
+  let techStackList = project.techStack.map((stack, index) => {
+    if(stack !== "Featured"){
+      if(index === project.techStack.length - 1){
+      return(stack)
+      }
+      else{
+        return(stack + ", ")
+      }
+    }})
+
   return (
     <Card sx={{ width: 350, minWidth: 300, margin: "10px", height: "300px", position: "relative"}}>
       <CardMedia
@@ -18,8 +28,8 @@ function Project({project, index}) {
         {project.description}
         </Typography> */}
         <Typography variant="body2" color="text.secondary">
-        <strong>Stack:</strong> {project.techStack.map((stack, index) => {
-          return(stack + " ")})}
+        <strong>Stack:</strong> {techStackList.map((stack, index) => {
+          return(stack)})}
         </Typography>
       </CardContent>
       <Box sx={{position: "absolute", bottom: "0px"}}>
