@@ -11,19 +11,18 @@ import Filter from "./Filter"
 
 
 function App() {
-
+  
   const anchors = ["Intro", "About", "Work"];
-  let theme = createTheme({
 
-  });
+  let theme = createTheme({});
   theme = responsiveFontSizes(theme);
-
   theme.typography.body1 = {
-  [theme.breakpoints.down('500')]: {
-    fontSize: '.85rem',
-  },
-};
+    [theme.breakpoints.down('500')]: {
+      fontSize: '.85rem',
+    },
+  };
 
+  
   
   return (
     <div>
@@ -37,8 +36,11 @@ function App() {
       paddingTop = {"10px"}
       dragAndMove = {true}
       navigationTooltips={anchors}
-      scrollBar= {true}
+      scrollBar= {false}
+      autoScrolling = {true}
       scrollOverflow= {true}
+      scrollOverflowReset= {true}
+      
 
       render={({ state, fullpageApi }) => {
         return (

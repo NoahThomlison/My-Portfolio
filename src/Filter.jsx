@@ -6,7 +6,7 @@ function Filter({buttonClick, accordianClick, expanded, filter}) {
   let stackList = ["Featured", "All", "React", "JS", "Python", "Ruby", "Rails", "MongoDB", "Express", "Node.js", "Bootstrap", "MUI", "API", "SASS"];
   
   return (
-    <Container className="filterBar" sx={{top: "15px", position: "fixed", zIndex: "10", left: "50%", transform: "translate(-50%, 0);"}}>
+    <Container className="filterBar" sx={{position: "fixed", zIndex: "10", left: "50%", transform: "translate(-50%, 0);"}}>
       <Accordion expanded={expanded} onClick={()=> accordianClick(expanded)}>
         <AccordionSummary  expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
           <Typography variant="h6">{filter}</Typography>
