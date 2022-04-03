@@ -5,7 +5,7 @@ function About({theme}) {
     <div className="section aboutMeImage">
     <ThemeProvider theme={theme}>
       <Container>
-        <Paper sx={{display: "flex", justifyContent: "center", alignItems: "center", padding: ".75em"}}>
+        <Box sx={{display: "flex", justifyContent: "center", alignItems: "center", padding: ".75em"}}>
           <Box sx={{padding: "1em"}} className="profilePictureBox">
             <img src={require('./images/profilePic.jpg')} className="profilePicture"/>
           </Box>
@@ -28,7 +28,7 @@ function About({theme}) {
               </Typography>
               </Box>
             </Box>
-            <Box sx={{width: "100%", paddingTop: "30px"}}>
+            {/* <Box sx={{width: "100%", paddingTop: "30px"}}>
               <Typography variant="h5" className="underline" sx={{paddingLeft: "5px"}}>Tech I use</Typography>
                 <Box sx={{display: "flex", flexWrap: "wrap", justifyContent: "space-around", paddingLeft: "10px", paddingRight: "10px", paddingTop: "10px"}}>
                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/>
@@ -49,9 +49,9 @@ function About({theme}) {
                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/>
                 <img src="https://raw.githubusercontent.com/devicons/devicon/d00d0969292a6569d45b06d3f350f463a0107b0d/icons/webpack/webpack-original-wordmark.svg" alt="webpack" width="40" height="40"/>
                 </Box>
-              </Box>
+              </Box> */}
           </Box>
-        </Paper>
+        </Box>
       </Container>
     </ThemeProvider>
     </div>
