@@ -2,17 +2,33 @@ import {Container, Box, Paper, Typography, ThemeProvider} from '@mui/material';
 
 function Education({theme}) {
   return (
-    <div className="section aboutMeImage">
     <ThemeProvider theme={theme}>
       <Container>
-        <Paper sx={{display: "flex", justifyContent: "center", alignItems: "center", padding: ".75em"}}>
-          <ul></ul>
-        </Paper>
+        <table>
+          <tbody>
+            <tr>
+              <td>Motorola Solutions</td>
+              <td>Mechanical Design Engineer</td>
+              <td>Vancouver, British Columbia</td>
+              <td>May 2021 to Current</td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <p>Work in a multi-disciplined team to develop commercial high-end security cameras</p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+              <p>Work in a multi-disciplined team to develop commercial high-end security cameras</p>
+            </td>
+            </tr>
+          </tbody>
+        </table>
       </Container>
     </ThemeProvider>
-    </div>
   )
 }
 
 
 export default Education;
+
