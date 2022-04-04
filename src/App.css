@@ -87,10 +87,18 @@ body.fp-viewing-Work .filterBar{
   opacity: 100%;
   }
   
+.profileText{
+    width: 75%;
+  }
+
 @media (max-width: 768px) {
   .profilePicture, .profilePictureBox{
     display: none;
+    width: 0%
     }
+  .profileText{
+    width: 100%;
+  }
   .buttonAccordian{
     flex-direction: column;
   }
@@ -108,6 +116,9 @@ body.fp-viewing-Work .filterBar{
     border-radius: .5em;
 }
 
+
+.flex-container > * {   flex: 1; }
+
 .buttonAccordian{
 display: flex;
 }
@@ -119,3 +130,8 @@ display: flex;
 .underline{
   border-bottom: 2px solid rgba(194, 211, 203, 1)
 }
+
+.work{
+  padding-top: 85px !important;
+}
+

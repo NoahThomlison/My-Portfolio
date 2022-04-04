@@ -1,7 +1,7 @@
 import {Typography, Box, ThemeProvider} from '@mui/material';
 import Filter from "./Filter"
 import Project from "./Project"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function ProjectList({projects, theme}) {
   const [filter, setFilter] = useState("All");
@@ -10,13 +10,16 @@ function ProjectList({projects, theme}) {
     setExpanded(!expanded)
   }
   
-  function buttonClick(e, stack){
-    e.stopPropagation() 
-    setFilter(stack)      
+    useEffect(() => {
+    window.fullpage_api.reBuild()
+  }, [filter, expanded]);
+
+    function buttonClick(e, stack){
+    e.stopPropagation()
+    setFilter(stack)
     setExpanded(!expanded)
-    window.fullpage_api.reBuild();
-    // window.fullpage_api.setResponsive(true);
   }
+
 
   const projectsToRender = projects.filter(function (project) {
     return((project.techStack.includes(filter) || filter === "All"))
@@ -25,8 +28,8 @@ function ProjectList({projects, theme}) {
   return (
     <ThemeProvider theme={theme}>
       <Filter buttonClick={buttonClick} accordianClick={accordianClick} expanded={expanded} filter={filter}></Filter>
-        <div className="section aboutMeImage responsiveHeight">
-          <Box sx={{ display: "Flex", flexWrap: "wrap", paddingTop: "70px", justifyContent: "center", height: "100%", alignContent: "flex-start"}}>
+        <div className="section aboutMeImage work">
+          <Box sx={{ display: "Flex", flexWrap: "wrap", justifyContent: "center", height: "100%", alignContent: "flex-start"}}>
             {projectsToRender.length === 0 &&
               <Box sx={{paddingTop: "50px"}}>
                 <Typography variant="h5">Nothing Yet.</Typography>
