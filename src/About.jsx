@@ -3,7 +3,6 @@ import {Container, Box, Paper, Typography, ThemeProvider} from '@mui/material';
 function About({theme}) {
   return (
     <ThemeProvider theme={theme}>
-         <Box sx={{display: "flex", flexDirection: "column"}}>
             <Box>
               <Box className="underline" >
               <Typography variant="h5" sx={{paddingLeft: "5px"}}>About me</Typography>
@@ -22,7 +21,6 @@ function About({theme}) {
               </Typography>
               </Box>
             </Box>
-          </Box>
     </ThemeProvider>
 
   )

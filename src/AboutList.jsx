@@ -26,11 +26,11 @@ function AboutList({theme}) {
               <Button onClick={(()=> setActive("WorkHistory"))}>Where I worked</Button>
               <Button onClick={(()=> setActive("Education"))}>Where I learned</Button>
             </Box>
-            <Box sx={{paddingTop: "50px", minHeight: "350px"}}>
+            <Box sx={{minHeight: "350px", display: "flex", flexDirection: "column", justifyContent: "space-evenly"}}>
             {active === "About" && <About theme={theme}></About>}
             {active === "TechStack" && <TechStack theme={theme}></TechStack>}
             {active === "WorkHistory" && <WorkHistory theme={theme}></WorkHistory>}
-            {active === "AbEducationout" && <Education theme={theme}></Education>}
+            {active === "Education" && <Education theme={theme}></Education>}
             </Box>
           </Box>
         </Paper>
