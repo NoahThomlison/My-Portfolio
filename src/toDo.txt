@@ -1,10 +1,4 @@
 To do:
-1 - update about me to be useable
-
-
-
-Completed:
-1 - mobile friendly
 
 2 - adds tabs to about me page
     about me, work experiance, education
@@ -19,3 +13,8 @@ Completed:
 6 - add a contact me form
 
 7 - add animations for mounting projects
+
+
+Completed:
+1 - update about me to be useable
+1 - mobile friendly
