@@ -19,7 +19,47 @@ function Education({theme}) {
             </tr>
             <tr>
               <td colspan="3">
-              <p>Work in a multi-disciplined team to develop commercial high-end security cameras</p>
+              <p>Coordinate with international suppliers to source and plan project timelines</p>
+            </td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <tbody>
+            <tr>
+              <td>WestMill Industries</td>
+              <td>Mechanical Design Engineer</td>
+              <td>Abbotsford, British Columbia</td>
+              <td>May 2019​ to May 2021​</td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <p>Design large scale-forestry equipment and machinery</p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+              <p>Creation of project plans with project managers</p>
+            </td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <tbody>
+            <tr>
+              <td>Modular Driven Technologies</td>
+              <td>Design Engineer</td>
+              <td>Chilliwack, British Columbia</td>
+              <td>May 2016​ to May 2019​</td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <p>Design, sourcing and testing of consumer sporting goods</p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+              <p>Manage projects for new products, lead design meetings and product kickoff meetings</p>
             </td>
             </tr>
           </tbody>
