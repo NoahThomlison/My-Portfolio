@@ -1,6 +1,4 @@
-import TypeAnimation from 'react-type-animation';
-import {Container, Box, Paper, Typography, Button, ButtonGroup, ThemeProvider } from '@mui/material';
-// import {ReactFullpage, fullpageApi} from '@fullpage/react-fullpage';
+import {Container, Box, Typography, Button, ThemeProvider } from '@mui/material';
 
 const Intro = ({fullpageApi, theme}) => {
   return (

@@ -1,5 +1,4 @@
 import ReactFullpage, {fullpage_api} from '@fullpage/react-fullpage';
-import {Container, Box, Paper, Button} from '@mui/material';
 import NavBar from './navBar.jsx';
 import Intro from './Intro.jsx'
 import AboutList from './AboutList.jsx'
@@ -7,8 +6,6 @@ import ProjectList from './ProjectList.jsx'
 import './App.css'
 import {projects} from './projectData.js'
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
-import Filter from "./Filter"
-
 
 function App() {
   

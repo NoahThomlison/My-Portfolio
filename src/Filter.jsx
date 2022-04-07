@@ -1,5 +1,5 @@
 import {Container, Typography, Button, Box, Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
-import React, { useState } from 'react';
+import React from 'react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 function Filter({buttonClick, accordianClick, expanded, filter}) {

@@ -1,4 +1,4 @@
-import {Container, Box, Paper, Typography, ThemeProvider} from '@mui/material';
+import { Box, Typography, ThemeProvider} from '@mui/material';
 
 function Education({theme}) {
   return (

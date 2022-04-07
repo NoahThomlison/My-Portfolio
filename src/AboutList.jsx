@@ -1,9 +1,8 @@
-import {Container, Box, Paper, Typography, ThemeProvider, Button} from '@mui/material';
+import {Container, Box, Paper, ThemeProvider, Button} from '@mui/material';
 import WorkHistory from './WorkHistory.jsx';
 import Education from './Education.jsx'
 import TechStack from './TechStack.jsx'
 import About from './About.jsx'
-import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import React, { useState } from 'react';
 
 
