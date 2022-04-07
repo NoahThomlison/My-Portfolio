@@ -5,36 +5,36 @@ function TechStack({theme}) {
     <ThemeProvider theme={theme}>
         <Box>
           <Box className="underline" >
-            <Typography variant="h6" sx={{paddingLeft: "5px"}}>Languages</Typography>
+            <Typography variant="h6" className="aboutHeaders">Languages</Typography>
           </Box>
-          <Box sx={{paddingLeft: "10px", paddingRight: "10px", paddingTop: "10px"}}>
+          <Box className="aboutContent">
             <Typography>JavaScript, CSS, HTML, Ruby, C, Python</Typography>
           </Box>
         </Box>
 
-        <Box>
+        <Box sx={{paddingTop: "20px"}}>
           <Box className="underline" >
-            <Typography variant="h6" sx={{paddingLeft: "5px"}}>Frameworks, Libraries, Enviroments</Typography>
+            <Typography variant="h6" className="aboutHeaders">Frameworks, Libraries, Enviroments</Typography>
           </Box>
-          <Box sx={{paddingLeft: "10px", paddingRight: "10px", paddingTop: "10px"}}>
+          <Box className="aboutContent">
             <Typography>NodeJS, React, Ajax, Express, EJS, Jquery, ActiveRecord, SASS, Ruby on Rails, Bootstrap, Material UI</Typography>
           </Box>
         </Box>
         
-        <Box>
+        <Box sx={{paddingTop: "20px"}}>
           <Box className="underline" >
-            <Typography variant="h6" sx={{paddingLeft: "5px"}}>Testing</Typography>
+            <Typography variant="h6" className="aboutHeaders">Testing</Typography>
           </Box>         
-          <Box sx={{paddingLeft: "10px", paddingRight: "10px", paddingTop: "10px"}}>
+          <Box className="aboutContent">
             <Typography>RSpec, Cypress, Storybook, Jest, Mocha, Chai</Typography>
           </Box>
         </Box>
 
-        <Box>
+        <Box sx={{paddingTop: "20px"}}>
           <Box className="underline" >
-            <Typography variant="h6" sx={{paddingLeft: "5px"}}>Databases</Typography>
+            <Typography variant="h6" className="aboutHeaders">Databases</Typography>
           </Box>
-          <Box sx={{paddingLeft: "10px", paddingRight: "10px", paddingTop: "10px"}}>
+          <Box className="aboutContent">
             <Typography>PostgreSQL, SQL, MongoDB</Typography>
           </Box>
         </Box>
