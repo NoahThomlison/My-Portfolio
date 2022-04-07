@@ -5,9 +5,9 @@ function Education({theme}) {
     <ThemeProvider theme={theme}>
       <Box>
         <Box className="underline">
-          <Typography variant="h6">Motorola Solutions</Typography>
+          <Typography variant="h6" className="aboutHeaders">Motorola Solutions</Typography>
         </Box>
-        <Box sx={{display: "flex", justifyContent: "space-between", paddingLeft: "10px", paddingRight: "10px", paddingTop: "10px"}}>
+        <Box sx={{display: "flex", justifyContent: "space-between"}} className="aboutContent">
           <Box>
             <Typography>Mechanical Design Engineer</Typography>
             <Typography>Vancouver, British Columbia</Typography>
@@ -22,16 +22,16 @@ function Education({theme}) {
 
       <Box>
         <Box className="underline">
-          <Typography variant="h6">WestMill Industries</Typography>
+          <Typography variant="h6" className="aboutHeaders">WestMill Industries</Typography>
         </Box>
-        <Box sx={{display: "flex", justifyContent: "space-between", paddingLeft: "10px", paddingRight: "10px", paddingTop: "10px"}}>
+        <Box sx={{display: "flex", justifyContent: "space-between"}} className="aboutContent">
           <Box>
             <Typography>Mechanical Design Engineer</Typography>
             <Typography>Abbotsford, British Columbia</Typography>
           </Box>
           <Typography>May 2019​ to May 2021​</Typography>
         </Box>
-        <Box sx={{display: "flex", justifyContent: "space-between", paddingLeft: "10px", paddingRight: "10px", paddingTop: "10px"}}>
+        <Box sx={{display: "flex", justifyContent: "space-between"}} className="aboutContent">
         <ul>
           <li><Typography>Design large scale-forestry equipment and machinery</Typography></li>
           <li><Typography>Creation of project plans with project managers</Typography></li>
@@ -41,9 +41,9 @@ function Education({theme}) {
 
       <Box>
         <Box className="underline">
-          <Typography variant="h6">Modular Driven Technologies</Typography>
+          <Typography variant="h6" className="aboutHeaders">Modular Driven Technologies</Typography>
         </Box>
-        <Box sx={{display: "flex", justifyContent: "space-between", paddingLeft: "10px", paddingRight: "10px", paddingTop: "10px"}}>
+        <Box sx={{display: "flex", justifyContent: "space-between"}} className="aboutContent">
           <Box>
             <Typography>Design Engineer</Typography>
             <Typography>Chilliwack, British Columbia</Typography>
