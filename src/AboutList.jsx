@@ -19,7 +19,7 @@ function AboutList({theme}) {
           <Box sx={{padding: "1em", width: "25%"}} className="profilePictureBox">
             <img src={require('./images/profilePic.jpg')} className="profilePicture"/>
           </Box>
-          <Box className="profileText" sx={{position: "relative", display: "flex", flexDirection: "column", height: "100%", minHeight: "400px"}}>
+          <Box className="profileText" sx={{position: "relative", display: "flex", flexDirection: "column", height: "100%", minHeight: "500px", justifyContent: "space-evenly"}}>
             <Box sx={{position: "absolute", top:"0px", display: "flex"}}>
               <Button onClick={(()=> setActive("About"))}>Stuff about me</Button>
               <Button onClick={(()=> setActive("TechStack"))}>Tech I use</Button>
@@ -27,10 +27,10 @@ function AboutList({theme}) {
               <Button onClick={(()=> setActive("Education"))}>Where I learned</Button>
             </Box>
             <Box sx={{minHeight: "350px", display: "flex", flexDirection: "column", justifyContent: "space-evenly"}}>
-            {active === "About" && <About theme={theme}></About>}
-            {active === "TechStack" && <TechStack theme={theme}></TechStack>}
-            {active === "WorkHistory" && <WorkHistory theme={theme}></WorkHistory>}
-            {active === "Education" && <Education theme={theme}></Education>}
+              {active === "About" && <About theme={theme}></About>}
+              {active === "TechStack" && <TechStack theme={theme}></TechStack>}
+              {active === "WorkHistory" && <WorkHistory theme={theme}></WorkHistory>}
+              {active === "Education" && <Education theme={theme}></Education>}
             </Box>
           </Box>
         </Paper>
