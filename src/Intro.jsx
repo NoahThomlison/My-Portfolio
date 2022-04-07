@@ -6,7 +6,6 @@ const Intro = ({fullpageApi, theme}) => {
   return (
     <div className="section heroImageAlt">
       <ThemeProvider theme={theme}>
-
         <Container sx={{position: "relative", bottom: "150px", color:"#FFFFFF", paddingTop: "100px"}}>
             <Typography variant="h1">
               Hi, Im Noah.

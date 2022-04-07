@@ -2,7 +2,7 @@ import ReactFullpage, {fullpage_api} from '@fullpage/react-fullpage';
 import {Container, Box, Paper, Button} from '@mui/material';
 import NavBar from './navBar.jsx';
 import Intro from './Intro.jsx'
-import About from './About.jsx'
+import AboutList from './AboutList.jsx'
 import ProjectList from './ProjectList.jsx'
 import './App.css'
 import {projects} from './projectData.js'
@@ -39,7 +39,6 @@ function App() {
       scrollBar= {false}
       autoScrolling = {true}
       scrollOverflow= {true}
-      scrollOverflowReset= {true}
       
 
       render={({ state, fullpageApi }) => {
@@ -48,7 +47,7 @@ function App() {
             <ReactFullpage.Wrapper >
               <div className="heroImageRemoved ">
                   <Intro fullpageApi={fullpageApi} theme={theme}></Intro>
-                  <About theme={theme}></About>
+                  <AboutList theme={theme}></AboutList>
                   <ProjectList fullpage_api={fullpage_api} projects={projects} theme={theme}></ProjectList>
               </div>
             </ReactFullpage.Wrapper>

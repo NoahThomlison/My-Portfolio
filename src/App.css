@@ -91,11 +91,22 @@ body.fp-viewing-Work .filterBar{
     width: 75%;
   }
 
+  .buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
 @media (max-width: 768px) {
   .profilePicture, .profilePictureBox{
     display: none;
     width: 0%
     }
+
+  .buttons{
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
   .profileText{
     width: 100%;
   }
@@ -106,14 +117,17 @@ body.fp-viewing-Work .filterBar{
     opacity: 0%;
     transition: opacity 1s;
     }
-      
+}
+
+.profilePictureBox{
+
 }
 
 .profilePicture {
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
-    border-radius: .5em;
+    border-radius: 5px;
 }
 
 
@@ -135,3 +149,17 @@ display: flex;
   padding-top: 85px !important;
 }
 
+ul  {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.aboutHeaders{
+  padding-left: 5px;
+}
+
+.aboutContent{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+}
