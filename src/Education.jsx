@@ -3,7 +3,6 @@ import {Container, Box, Paper, Typography, ThemeProvider} from '@mui/material';
 function Education({theme}) {
   return (
     <ThemeProvider theme={theme}>
-        <Box>
           <Box className="underline">
             <Typography variant="h6" sx={{paddingLeft: "5px"}}>Lighthouse Labs</Typography>
             <Box sx={{display: "flex", width: "100%", justifyContent: "space-between"}}>
@@ -27,7 +26,6 @@ function Education({theme}) {
               <Typography>Sept. 2012​ to May. 2014​</Typography>
             </Box>
           </Box>
-        </Box>
     </ThemeProvider>
   )
 }
