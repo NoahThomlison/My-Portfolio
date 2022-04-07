@@ -18,12 +18,10 @@ function App() {
   theme = responsiveFontSizes(theme);
   theme.typography.body1 = {
     [theme.breakpoints.down('500')]: {
-      fontSize: '.85rem',
+      fontSize: '.80rem',
     },
   };
 
-  
-  
   return (
     <div>
       <NavBar></NavBar>
