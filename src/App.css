@@ -72,6 +72,7 @@ body.fp-viewing-Work .navBar{
 body.fp-viewing-About .navBar{ 
   opacity: 90%;
   transition: opacity 1s;
+  z-index: -2
   }
     
 body.fp-viewing-About .filterBar{ 
