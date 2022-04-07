@@ -25,11 +25,11 @@ function AboutList({theme}) {
             <img src={require('./images/profilePic.jpg')} className="profilePicture"/>
           </Box>
           <Box className="profileText" sx={{position: "relative", display: "flex", flexDirection: "column", height: "100%", minHeight: "500px"}}>
-            <Box sx={{display: "flex", width: "100%", justifyContent: "space-between"}}>
-              <Button className={active === "About" ? 'test': null} sx={{width: "24%"}} variant="outlined" onClick={(()=> handleClick("About"))}>Stuff about me</Button>
-              <Button varient={active === "TechStack" ? 'outlined': null} sx={{width: "24%"}} variant="outlined" onClick={(()=> handleClick("TechStack"))}>Tech I use</Button>
-              <Button className={active ? 'test': null} sx={{width: "24%"}} variant="outlined" onClick={(()=> handleClick("WorkHistory"))}>Where I worked</Button>
-              <Button className={active ? 'test': null} sx={{width: "24%"}} variant="outlined" onClick={(()=> handleClick("Education"))}>Where I learned</Button>
+            <Box className="buttons">
+              <Button variant={active === "About" ? 'contained': "outlined"} onClick={(()=> handleClick("About"))}>Stuff about me</Button>
+              <Button variant={active === "TechStack" ? 'contained': "outlined"} onClick={(()=> handleClick("TechStack"))}>Tech I use</Button>
+              <Button variant={active === "WorkHistory" ? 'contained': "outlined"} onClick={(()=> handleClick("WorkHistory"))}>Where I worked</Button>
+              <Button variant={active === "Education" ? 'contained': "outlined"} onClick={(()=> handleClick("Education"))}>Where I learned</Button>
             </Box>
             <Box sx={{minHeight: "350px", display: "flex", flexDirection: "column", justifyContent: "flex-start", paddingTop: "15px"}}>
               {active === "About" && <About theme={theme}></About>}

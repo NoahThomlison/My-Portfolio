@@ -91,11 +91,22 @@ body.fp-viewing-Work .filterBar{
     width: 75%;
   }
 
+  .buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
 @media (max-width: 768px) {
   .profilePicture, .profilePictureBox{
     display: none;
     width: 0%
     }
+
+  .buttons{
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
   .profileText{
     width: 100%;
   }
@@ -106,7 +117,6 @@ body.fp-viewing-Work .filterBar{
     opacity: 0%;
     transition: opacity 1s;
     }
-      
 }
 
 .profilePictureBox{
