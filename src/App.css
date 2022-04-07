@@ -130,3 +130,9 @@ display: flex;
 .underline{
   border-bottom: 2px solid rgba(194, 211, 203, 1)
 }
+
+ul  {
+  margin-top: 0px;
+  /* set to 0 if your not using a list-style-type */
+  padding-left: 20px;
+}
