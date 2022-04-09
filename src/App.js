@@ -6,10 +6,11 @@ import ProjectList from './ProjectList.jsx'
 import './App.css'
 import {projects} from './projectData.js'
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
+import Contact from "./Contact"
 
 function App() {
   
-  const anchors = ["Intro", "About", "Work"];
+  const anchors = ["Intro", "About", "Work", "Contact"];
 
   let theme = createTheme({});
   theme = responsiveFontSizes(theme);
@@ -44,6 +45,7 @@ function App() {
                   <Intro fullpageApi={fullpageApi} theme={theme}></Intro>
                   <AboutList theme={theme}></AboutList>
                   <ProjectList fullpage_api={fullpage_api} projects={projects} theme={theme}></ProjectList>
+                  <Contact theme={theme}></Contact>
               </div>
             </ReactFullpage.Wrapper>
           </div>
