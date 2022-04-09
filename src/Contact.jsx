@@ -4,9 +4,17 @@ import TextField from '@mui/material/TextField';
 function Contact({theme}) {
 
   const submitForm = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "test"
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
   }
+
   return (
     <div className="section aboutMeImage">
       <ThemeProvider theme={theme}>
@@ -15,11 +23,11 @@ function Contact({theme}) {
           <Box className="underline" sx={{width:"100%", display:"flex", justifyContent: "center"}} >
             <Typography variant="h6">Contact</Typography>
           </Box>
-            <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-              <TextField sx={{minWidth: "90%"}} label="Name" type="padssword"/> 
-              <TextField sx={{minWidth: "90%"}} label="Email" type="pasdssword"/> 
+            <form onSubmit={(e) => submitForm(e)} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+              <TextField sx={{minWidth: "90%"}} label="Name" type="Name"/> 
+              <TextField sx={{minWidth: "90%"}} label="Email" type="Email"/> 
               <TextField sx={{minWidth: "90%"}} label="Message" multiline rows={4}/>
-              <Button type="submit" onClick={(e) => submitForm(e)}sx={{minWidth: "25%"}} variant="outlined">Submit</Button> 
+              <Button type="submit" sx={{minWidth: "25%"}} variant="outlined">Submit</Button> 
             </form>
           </Paper>
         </Container>
