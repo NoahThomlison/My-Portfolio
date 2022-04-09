@@ -44,8 +44,8 @@ export const projects = [
     description: "Interview Scheduler is a single-page application (SPA) that allows users to book technical interviews between students and mentors.", 
     techStack: ["Featured", "React", "Cypress", "Storybook", "Jest", "Express"],
     githubLink: "https://github.com/NoahThomlison/scheduler",
-    image: ["./projectImages&Gifs/Fullsize/Scheduler.png"],
-    thumbnail: ["../projectImages&Gifs/Thumbnail/Scheduler.png"]
+    image: ["./projectImages&Gifs/Fullsize/Scheduler.gif"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/Scheduler Small.gif"]
   },
   {
     title: "Smart-To-Do-List",
