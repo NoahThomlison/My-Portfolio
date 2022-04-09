@@ -1,28 +1,24 @@
-import { Box, Typography, ThemeProvider} from '@mui/material';
+import {Container, Box, Paper, ThemeProvider, Button, Typography} from '@mui/material';
+import TextField from '@mui/material/TextField';
 
 function Contact({theme}) {
   return (
     <div className="section aboutMeImage">
-      <div class="container">
-        <form action="action_page.php">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name.."></input>
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name.."></input>
-          <label for="country">Country</label>
-          <select id="country" name="country">
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
-          </select>
-          <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
-          <input type="submit" value="Submit"></input>
-        </form>
-      </div>
+      <ThemeProvider theme={theme}>
+        <Container sx={{}}>
+          <Paper sx={{display: "flex", flexDirection: "column", justifyContent: "space-evenly", alignItems: "center", padding: ".75em", minHeight: "500px"}}>
+          <Box className="underline" sx={{width:"100%", display:"flex", justifyContent: "center"}} >
+            <Typography variant="h6">Contact</Typography>
+          </Box>
+            <TextField sx={{minWidth: "90%"}} label="Name" type="padssword"/> 
+            <TextField sx={{minWidth: "90%"}} label="Email" type="pasdssword"/> 
+            <TextField sx={{minWidth: "90%"}} label="Message" multiline rows={4}/>
+            <Button sx={{minWidth: "25%"}} variant="outlined">Submit</Button> 
+          </Paper>
+        </Container>
+      </ThemeProvider>
     </div>
   )
 }
-
 
 export default Contact;
