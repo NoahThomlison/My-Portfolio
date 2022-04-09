@@ -10,7 +10,7 @@ import Contact from "./Contact"
 
 function App() {
   
-  const anchors = ["Intro", "About", "Work", "Contact"];
+  const anchors = ["Intro", "About", "Work", "ContactForm"];
 
   let theme = createTheme({});
   theme = responsiveFontSizes(theme);
