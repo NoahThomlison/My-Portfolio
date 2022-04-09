@@ -2,6 +2,11 @@ import {Container, Box, Paper, ThemeProvider, Button, Typography} from '@mui/mat
 import TextField from '@mui/material/TextField';
 
 function Contact({theme}) {
+
+  const submitForm = (e) => {
+    e.preventDefault()
+
+  }
   return (
     <div className="section aboutMeImage">
       <ThemeProvider theme={theme}>
@@ -10,10 +15,12 @@ function Contact({theme}) {
           <Box className="underline" sx={{width:"100%", display:"flex", justifyContent: "center"}} >
             <Typography variant="h6">Contact</Typography>
           </Box>
-            <TextField sx={{minWidth: "90%"}} label="Name" type="padssword"/> 
-            <TextField sx={{minWidth: "90%"}} label="Email" type="pasdssword"/> 
-            <TextField sx={{minWidth: "90%"}} label="Message" multiline rows={4}/>
-            <Button sx={{minWidth: "25%"}} variant="outlined">Submit</Button> 
+            <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+              <TextField sx={{minWidth: "90%"}} label="Name" type="padssword"/> 
+              <TextField sx={{minWidth: "90%"}} label="Email" type="pasdssword"/> 
+              <TextField sx={{minWidth: "90%"}} label="Message" multiline rows={4}/>
+              <Button type="submit" onClick={(e) => submitForm(e)}sx={{minWidth: "25%"}} variant="outlined">Submit</Button> 
+            </form>
           </Paper>
         </Container>
       </ThemeProvider>
