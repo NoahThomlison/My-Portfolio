@@ -2,18 +2,24 @@ import {Container, Box, Paper, ThemeProvider, Button, Typography} from '@mui/mat
 import TextField from '@mui/material/TextField';
 
 function Contact({theme}) {
-
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+  
   const submitForm = (e) => {
     e.preventDefault();
 
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: "test"
+        body: encode({ "form-name": "contact", ...this.state })
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error));
-  }
+
+  };
 
   return (
     <div className="section aboutMeImage">
@@ -26,7 +32,7 @@ function Contact({theme}) {
             <form onSubmit={(e) => submitForm(e)} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
               <TextField sx={{minWidth: "90%"}} label="Name" type="Name"/> 
               <TextField sx={{minWidth: "90%"}} label="Email" type="Email"/> 
-              <TextField sx={{minWidth: "90%"}} label="Message" multiline rows={4}/>
+              <TextField sx={{minWidth: "90%"}} label="Message" name="Message" multiline rows={4}/>
               <Button type="submit" sx={{minWidth: "25%"}} variant="outlined">Submit</Button> 
             </form>
           </Paper>
