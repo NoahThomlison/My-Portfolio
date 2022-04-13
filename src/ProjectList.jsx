@@ -4,7 +4,7 @@ import Project from "./Project"
 import React, { useState, useEffect } from 'react';
 
 function ProjectList({projects, theme}) {
-  const [filter, setFilter] = useState("All");
+  const [filter, setFilter] = useState("React");
   const [expanded, setExpanded] = useState(false);
   function accordianClick(state){
     setExpanded(!expanded)

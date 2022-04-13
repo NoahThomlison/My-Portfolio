@@ -3,7 +3,9 @@ import React from 'react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 function Filter({buttonClick, accordianClick, expanded, filter}) {
-  let stackList = ["Featured", "All", "React", "JS", "Python", "Ruby", "Rails", "MongoDB", "Express", "Node.js", "Bootstrap", "MUI", "API", "SASS"];
+  // let stackList = ["Featured", "All", "React", "JS", "Python", "Ruby", "Rails", "MongoDB", "Express", "Node.js", "Bootstrap", "MUI", "API", "SASS"];
+  let stackList = ["Featured", "React", "JS", "Python", "Ruby", "Rails", "MongoDB", "Express", "Node.js", "Bootstrap", "MUI", "API", "SASS"];
+
   
   return (
     <Container className="filterBar" sx={{position: "fixed", zIndex: "10", paddingTop: "20px", left: "50%", transform: "translate(-50%, 0);"}}>
