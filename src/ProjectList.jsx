@@ -2,7 +2,7 @@ import {Typography, Box, ThemeProvider, Button} from '@mui/material';
 import Filter from "./Filter"
 import Project from "./Project"
 import React, { useState, useEffect } from 'react';
-import Slide from "./Slide"
+
 function ProjectList({projects, theme}) {
   const [filter, setFilter] = useState("React");
   const [expanded, setExpanded] = useState(false);
