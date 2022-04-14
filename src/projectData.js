@@ -88,11 +88,51 @@ export const projects = [
     thumbnail: ["../projectImages&Gifs/Thumbnail/MiniProject - Menu Small.gif"]
   },
   {
-    title: "MiniProject - Tabs",
-    description: "Renders work experiance from an API, allows sorting by job", 
-    techStack: ["React", "API"],
-    githubLink: "https://github.com/NoahThomlison/react-mini-project",
-    image: ["./projectImages&Gifs/Fullsize/MiniProject - Tab.gif?raw=true"],
-    thumbnail: ["../projectImages&Gifs/Thumbnail/MiniProject - Tab Small.gif"]
+    title: "MiniProject - Turtle OOP Snake",
+    description: "Creates a python version of Snake using TKinter and OOP", 
+    techStack: ["Python"],
+    githubLink: "https://noahthomlison.github.io/100-days-of-python/",
+    image: ["./projectImages&Gifs/Fullsize/turtleSnake.gif?raw=true"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/turtleSnake.gif"]
+  },
+  {
+    title: "MiniProject - Quizler",
+    description: "A Python quiz application which pulls questions from external API", 
+    techStack: ["Python", "API"],
+    githubLink: "https://noahthomlison.github.io/100-days-of-python/",
+    image: ["./projectImages&Gifs/Fullsize/quizler.gif?raw=true"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/quizler.gif"]
+  },
+  {
+    title: "MiniProject - Learn French Flip Cards",
+    description: "Flip card program to learn new language, writes missed words to file to reshow", 
+    techStack: ["Python",],
+    githubLink: "https://noahthomlison.github.io/100-days-of-python/",
+    image: ["./projectImages&Gifs/Fullsize/frenchCards.gif?raw=true"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/frenchCards.gif"]
+  },
+  {
+    title: "MiniProject - Turtle Race",
+    description: "Project to use TKinter to create a turtle racing game", 
+    techStack: ["Python",],
+    githubLink: "https://noahthomlison.github.io/100-days-of-python/",
+    image: ["./projectImages&Gifs/Fullsize/turtleRace.gif?raw=true"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/turtleRace.gif"]
+  },
+  {
+    title: "MiniProject - Python Pong",
+    description: "Renders classic Pong game for 2 players using OOP and TKinter", 
+    techStack: ["Python",],
+    githubLink: "https://noahthomlison.github.io/100-days-of-python/",
+    image: ["./projectImages&Gifs/Fullsize/turtlePong.gif?raw=true"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/turtlePong.gif"]
+  },
+  {
+    title: "MiniProject - Python Frogger",
+    description: "Renders classic Frogger game", 
+    techStack: ["Python",],
+    githubLink: "https://noahthomlison.github.io/100-days-of-python/",
+    image: ["./projectImages&Gifs/Fullsize/turtleFrogger.gif?raw=true"],
+    thumbnail: ["../projectImages&Gifs/Thumbnail/turtleFrogger.gif"]
   },
 ]
