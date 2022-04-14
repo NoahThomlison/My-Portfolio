@@ -1,4 +1,4 @@
-import {Typography, Box, ThemeProvider} from '@mui/material';
+import {Typography, Container, Box, ThemeProvider, Button} from '@mui/material';
 import Filter from "./Filter"
 import Project from "./Project"
 import React, { useState, useEffect } from 'react';
@@ -6,43 +6,62 @@ import React, { useState, useEffect } from 'react';
 function ProjectList({projects, theme}) {
   const [filter, setFilter] = useState("React");
   const [expanded, setExpanded] = useState(false);
+  const [slideIndex, setSlideIndex] = useState(0)
+  
+  let projectSlides = []
   function accordianClick(state){
     setExpanded(!expanded)
   }
-  
-    useEffect(() => {
-    console.log(window.fullpage_api.getActiveSection())
-    window.fullpage_api.reBuild()
-    // window.fullpage_api.moveSectionUp();
 
-  }, [filter, expanded]);
-
-    function buttonClick(e, stack){
+  function buttonClick(e, stack){
     e.stopPropagation()
     setFilter(stack)
     setExpanded(!expanded)
   }
 
+  function filterAndSplitProjects(filter, index){
+    const projectsToRender = projects.filter(function (project) {
+      return((
+        project.techStack.includes(filter) || filter === "All"
+        ))
+    })
 
-  const projectsToRender = projects.filter(function (project) {
-    return((project.techStack.includes(filter) || filter === "All"))
-  })
+    const slides = []
+    const projectPerSlide = 4;
+    for (let i = 0; i < projectsToRender.length; i += projectPerSlide) {
+        const slideSet = projectsToRender.slice(i, i + projectPerSlide);
+        slides.push(slideSet)
+    }
+    console.log(slides)
+    return(slides)
+  }
+  projectSlides = filterAndSplitProjects(filter, slideIndex)
+  console.log(projectSlides)
+
 
   return (
     <ThemeProvider theme={theme}>
       <Filter buttonClick={buttonClick} accordianClick={accordianClick} expanded={expanded} filter={filter}></Filter>
         <div className="section aboutMeImage work">
-          <Box sx={{ display: "Flex", flexWrap: "wrap", justifyContent: "center", height: "100%", alignContent: "flex-start"}}>
-            {projectsToRender.length === 0 &&
-              <Box sx={{paddingTop: "50px"}}>
-                <Typography variant="h5">Nothing Yet.</Typography>
-              </Box>}
-            {projectsToRender.length > 0 &&
-              projectsToRender.map((project, index) => {
-                return(<Project key={projectsToRender.indexOf(project)} project={project} index={index} image={project.image}></Project>)
-              })
+          <Container sx={{display: "Flex", justifyContent:"space-between", width:"90%"}}>
+            {projectSlides[slideIndex-1] ? 
+            <Button onClick={() => setSlideIndex(slideIndex-1)}>Previous</Button>
+            :
+            <Button>Previous</Button>
             }
-          </Box>
+            <Box sx={{ display: "Flex", flexWrap: "wrap", justifyContent: "center", height: "100%", alignContent: "flex-start"}}>
+              {projectSlides[slideIndex].map((project)=>{
+                return(
+                  <Project project={project} image={project.image}></Project>
+                )
+                  })}
+            </Box>
+            {projectSlides[slideIndex+1] ? 
+            <Button onClick={() => setSlideIndex(slideIndex+1)}>Next</Button>
+            :
+            <Button>Next</Button>
+            }
+          </Container>
         </div>
     </ThemeProvider>
   )
