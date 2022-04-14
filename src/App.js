@@ -34,7 +34,7 @@ function App() {
       navigationTooltips={anchors}
       scrollBar= {false}
       autoScrolling = {true}
-      scrollOverflow= {true}
+      scrollOverflow= {false}
       
 
       render={({ state, fullpageApi }) => {
