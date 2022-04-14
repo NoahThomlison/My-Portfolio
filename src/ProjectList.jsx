@@ -1,4 +1,4 @@
-import {Typography, Box, ThemeProvider, Button} from '@mui/material';
+import {Typography, Container, Box, ThemeProvider, Button} from '@mui/material';
 import Filter from "./Filter"
 import Project from "./Project"
 import React, { useState, useEffect } from 'react';
@@ -44,17 +44,17 @@ function ProjectList({projects, theme}) {
     <ThemeProvider theme={theme}>
       <Filter buttonClick={buttonClick} accordianClick={accordianClick} expanded={expanded} filter={filter}></Filter>
         <div className="section aboutMeImage work">
-          <Box sx={{ display: "Flex", flexWrap: "wrap", justifyContent: "center", height: "100%", alignContent: "flex-start"}}>
-          <Button onClick={() => setSlideIndex(0)}>Previous</Button>
-          <div>
-            {projectSlides[0].map((project)=>{
-              return(
-                <Project project={project} image={project.image}></Project>
-              )
-                })}
-          </div>
-          <Button onClick={() => setSlideIndex(1)}>Next</Button>
-          </Box>
+          <Container sx={{display: "Flex", justifyContent:"space-between", width:"90%"}}>
+            <Button onClick={() => setSlideIndex(0)}>Previous</Button>
+            <Box sx={{ display: "Flex", flexWrap: "wrap", justifyContent: "center", height: "100%", alignContent: "flex-start"}}>
+              {projectSlides[0].map((project)=>{
+                return(
+                  <Project project={project} image={project.image}></Project>
+                )
+                  })}
+            </Box>
+            <Button onClick={() => setSlideIndex(1)}>Next</Button>
+          </Container>
         </div>
     </ThemeProvider>
   )
