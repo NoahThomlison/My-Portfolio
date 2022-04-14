@@ -33,8 +33,7 @@ function ProjectList({projects, theme}) {
         slides.push(slideSet)
     }
     console.log(slides)
-    let slideSet = slides.slice(index, index+4)
-    return(slideSet)
+    return(slides)
   }
   projectSlides = filterAndSplitProjects(filter, slideIndex)
   console.log(projectSlides)
@@ -45,15 +44,23 @@ function ProjectList({projects, theme}) {
       <Filter buttonClick={buttonClick} accordianClick={accordianClick} expanded={expanded} filter={filter}></Filter>
         <div className="section aboutMeImage work">
           <Container sx={{display: "Flex", justifyContent:"space-between", width:"90%"}}>
-            <Button onClick={() => setSlideIndex(0)}>Previous</Button>
+            {projectSlides[slideIndex-1] ? 
+            <Button onClick={() => setSlideIndex(slideIndex-1)}>Previous</Button>
+            :
+            <Button>Previous</Button>
+            }
             <Box sx={{ display: "Flex", flexWrap: "wrap", justifyContent: "center", height: "100%", alignContent: "flex-start"}}>
-              {projectSlides[0].map((project)=>{
+              {projectSlides[slideIndex].map((project)=>{
                 return(
                   <Project project={project} image={project.image}></Project>
                 )
                   })}
             </Box>
-            <Button onClick={() => setSlideIndex(1)}>Next</Button>
+            {projectSlides[slideIndex+1] ? 
+            <Button onClick={() => setSlideIndex(slideIndex+1)}>Next</Button>
+            :
+            <Button>Next</Button>
+            }
           </Container>
         </div>
     </ThemeProvider>
