@@ -18,6 +18,8 @@ function ProjectList({projects, theme}) {
   // }, [filter, expanded]);
 
     function buttonClick(e, stack){
+    window.fullpage_api.destroy("All")
+
     e.stopPropagation()
     setFilter(stack)
     setExpanded(!expanded)
