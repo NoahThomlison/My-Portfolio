@@ -11,7 +11,10 @@ function ProjectList({projects, theme}) {
   }
   
     useEffect(() => {
+    console.log(window.fullpage_api.getActiveSection())
     window.fullpage_api.reBuild()
+    // window.fullpage_api.moveSectionUp();
+
   }, [filter, expanded]);
 
     function buttonClick(e, stack){
