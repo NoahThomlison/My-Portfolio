@@ -6,26 +6,20 @@ import Slide from "./Slide"
 function ProjectList({projects, theme}) {
   const [filter, setFilter] = useState("React");
   const [expanded, setExpanded] = useState(false);
-  // const [projectSlides, setProjectSlides] = useState()
-  // const [projectsToRender, setProjectsToRender] = useState(projects.slice(0, 4))
+  const [slideIndex, setSlideIndex] = useState(0)
+  
+  let projectSlides = []
   function accordianClick(state){
     setExpanded(!expanded)
   }
-  
-  //   useEffect(() => {
-  //   window.fullpage_api.destroy()
-  //   window.fullpage_api.reBuild()
-  // }, [filter, expanded]);
 
-    function buttonClick(e, stack){
-    window.fullpage_api.destroy("All")
-
+  function buttonClick(e, stack){
     e.stopPropagation()
     setFilter(stack)
     setExpanded(!expanded)
   }
 
-
+  function filterAndSplitProjects(filter, index){
     const projectsToRender = projects.filter(function (project) {
       return((
         project.techStack.includes(filter) || filter === "All"
@@ -38,18 +32,12 @@ function ProjectList({projects, theme}) {
         const slideSet = projectsToRender.slice(i, i + projectPerSlide);
         slides.push(slideSet)
     }
-    const handleAddSection = () => {
-      console.log("adding new section");
-      this.setState((state, props) => {
-        let fullpages = JSON.parse(JSON.stringify(state.fullpages));
-        fullpages.push({
-          text: "new section"
-        });
-        return {
-          fullpages
-        };
-      });
-    }
+    console.log(slides)
+    let slideSet = slides.slice(index, index+4)
+    return(slideSet)
+  }
+  projectSlides = filterAndSplitProjects(filter, slideIndex)
+  console.log(projectSlides)
 
 
   return (
@@ -57,63 +45,16 @@ function ProjectList({projects, theme}) {
       <Filter buttonClick={buttonClick} accordianClick={accordianClick} expanded={expanded} filter={filter}></Filter>
         <div className="section aboutMeImage work">
           <Box sx={{ display: "Flex", flexWrap: "wrap", justifyContent: "center", height: "100%", alignContent: "flex-start"}}>
-            {slides.map((slide)=>{
+          <Button onClick={() => setSlideIndex(0)}>Previous</Button>
+          <div>
+            {projectSlides[0].map((project)=>{
               return(
-              <div className="slide">
-              {slide.map((project, index) => {
-                return(
-                  <Project key={projectsToRender.indexOf(project)} project={project} index={index} image={project.image}></Project>
-                )
-              })}
-              </div>
+                <Project project={project} image={project.image}></Project>
               )
                 })}
-                
-                                {/* // </div> */}
-
-{/*                 
-            // <div className="slide">
-            // <Project project={slides[0][0]} index={slides[0][0]} image={slides[0][0].image}></Project>
-            // <Project project={slides[0][0]} index={slides[0][0]} image={slides[0][0].image}></Project>
-            // <Project project={slides[0][0]} index={slides[0][0]} image={slides[0][0].image}></Project>
-            // <Project project={slides[0][0]} index={slides[0][0]} image={slides[0][0].image}></Project>
-            // </div>
-            // <div className="slide">
-            // <Project project={slides[0][0]} index={slides[0][0]} image={slides[0][0].image}></Project>
-            // <Project project={slides[0][0]} index={slides[0][0]} image={slides[0][0].image}></Project>
-            // <Project project={slides[0][0]} index={slides[0][0]} image={slides[0][0].image}></Project>
-            // <Project project={slides[0][0]} index={slides[0][0]} image={slides[0][0].image}></Project>
-            // </div>
-            // <div className="slide">
-            // <Project project={slides[0][0]} index={slides[0][0]} image={slides[0][0].image}></Project>
-            // <Project project={slides[0][0]} index={slides[0][0]} image={slides[0][0].image}></Project>
-            // <Project project={slides[0][0]} index={slides[0][0]} image={slides[0][0].image}></Project>
-            // <Project project={slides[0][0]} index={slides[0][0]} image={slides[0][0].image}></Project>
-            // </div> */}
-{/*             
-            {projectsToRender.length === 0 &&
-              <Box sx={{paddingTop: "50px"}}>
-                <Typography variant="h5">Nothing Yet.</Typography>
-              </Box>}
-              {slides.map((slideSet) => {
-              return(
-              <Slide slideSet={slideSet}></Slide>
-              )
-              })} */}
-            {/* <div className="slide">
-            {projectsToRender.length > 0 &&
-              projectsToRender.map((project, index) => {
-                return(
-                  <div className="slide">
-
-                <Project key={projectsToRender.indexOf(project)} project={project} index={index} image={project.image}></Project>
-                </div>
-                )
-              })
-            }
-            </div> */}
+          </div>
+          <Button onClick={() => setSlideIndex(1)}>Next</Button>
           </Box>
-          
         </div>
     </ThemeProvider>
   )
