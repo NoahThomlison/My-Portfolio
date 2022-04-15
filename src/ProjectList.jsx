@@ -1,7 +1,9 @@
-import {Typography, Container, Box, ThemeProvider, Button} from '@mui/material';
+import {Typography, Container, Box, ThemeProvider, Button, IconButton } from '@mui/material';
 import Filter from "./Filter"
 import Project from "./Project"
 import React, { useState, useEffect } from 'react';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 function ProjectList({projects, theme}) {
   const [filter, setFilter] = useState("React");
@@ -45,9 +47,9 @@ function ProjectList({projects, theme}) {
         <div className="section aboutMeImage work">
           <Container sx={{display: "Flex", justifyContent:"space-between", width:"90%"}}>
             {projectSlides[slideIndex-1] ? 
-            <Button onClick={() => setSlideIndex(slideIndex-1)}>Previous</Button>
+            <IconButton onClick={() => setSlideIndex(slideIndex-1)}><ArrowBackIosNewIcon/></IconButton>
             :
-            <Button>Previous</Button>
+            <IconButton><ArrowBackIosNewIcon/></IconButton>
             }
             <Box sx={{ display: "Flex", flexWrap: "wrap", justifyContent: "center", height: "100%", alignContent: "flex-start"}}>
               {projectSlides[slideIndex].map((project)=>{
@@ -57,9 +59,9 @@ function ProjectList({projects, theme}) {
                   })}
             </Box>
             {projectSlides[slideIndex+1] ? 
-            <Button onClick={() => setSlideIndex(slideIndex+1)}>Next</Button>
+            <IconButton onClick={() => setSlideIndex(slideIndex+1)}><ArrowForwardIosIcon/></IconButton>
             :
-            <Button>Next</Button>
+            <IconButton><ArrowForwardIosIcon/></IconButton>
             }
           </Container>
         </div>
