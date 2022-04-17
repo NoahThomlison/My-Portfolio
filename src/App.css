@@ -107,6 +107,14 @@ body.fp-viewing-Work .filterBar{
     font-size: 10rem;
   }
 
+  .project{
+    width: 500px;
+    min-width: 300px;
+    margin: 10px;
+    height: 350px;
+    position: relative;
+  }
+
 
 @media only screen and (max-width: 1050px) {
   .profilePicture, .profilePictureBox{

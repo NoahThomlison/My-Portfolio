@@ -13,7 +13,7 @@ function Project({project, index}) {
     }})
 
   return (
-    <Card sx={{ width: 350, minWidth: 300, margin: "10px", height: "300px", position: "relative"}}>
+    <Card className="project">
       <CardMedia
         component="img"
         height="50%"
@@ -24,9 +24,10 @@ function Project({project, index}) {
         <Typography gutterBottom variant="h7" component="div">
         {project.title}
         </Typography>
-        {/* <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary">
         {project.description}
-        </Typography> */}
+        </Typography>
+        <br></br>
         <Typography variant="body2" color="text.secondary">
         <strong>Stack:</strong> {techStackList.map((stack, index) => {
           return(stack)})}

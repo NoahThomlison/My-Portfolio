@@ -21,6 +21,11 @@ function ProjectList({projects, theme}) {
     setExpanded(!expanded)
   }
 
+  useEffect(() => {
+    setSlideIndex(0);
+  },[filter]);
+
+
   function filterAndSplitProjects(filter, index){
     const projectsToRender = projects.filter(function (project) {
       return((
@@ -45,11 +50,11 @@ function ProjectList({projects, theme}) {
     <ThemeProvider theme={theme}>
       <Filter buttonClick={buttonClick} accordianClick={accordianClick} expanded={expanded} filter={filter}></Filter>
         <div className="section aboutMeImage work">
-          <Container sx={{display: "Flex", justifyContent:"space-between", width:"90%"}}>
+          <Box sx={{display: "Flex", justifyContent:"space-between", width:"90%"}}>
             {projectSlides[slideIndex-1] ? 
             <IconButton onClick={() => setSlideIndex(slideIndex-1)}><ArrowBackIosNewIcon/></IconButton>
             :
-            <IconButton><ArrowBackIosNewIcon/></IconButton>
+            <IconButton disabled ><ArrowBackIosNewIcon/></IconButton>
             }
             <Box sx={{ display: "Flex", flexWrap: "wrap", justifyContent: "center", height: "100%", alignContent: "flex-start"}}>
               {projectSlides[slideIndex].map((project)=>{
@@ -61,9 +66,9 @@ function ProjectList({projects, theme}) {
             {projectSlides[slideIndex+1] ? 
             <IconButton onClick={() => setSlideIndex(slideIndex+1)}><ArrowForwardIosIcon/></IconButton>
             :
-            <IconButton><ArrowForwardIosIcon/></IconButton>
+            <IconButton disabled ><ArrowForwardIosIcon/></IconButton>
             }
-          </Container>
+          </Box>
         </div>
     </ThemeProvider>
   )
