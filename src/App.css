@@ -107,15 +107,6 @@ body.fp-viewing-Work .filterBar{
     font-size: 10rem;
   }
 
-  .project{
-    width: 500px;
-    min-width: 300px;
-    margin: 10px;
-    height: 350px;
-    position: relative;
-  }
-
-
 @media only screen and (max-width: 1050px) {
   .profilePicture, .profilePictureBox{
     display: none;
@@ -210,4 +201,36 @@ ul  {
 .arrow{
   height: 100px;
   background-color: azure;
+}
+
+.projectContainer{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.project{
+  width: 500px;
+  min-width: 300px;
+  margin: 10px;
+  position: relative;
+}
+
+@media only screen and (max-width: 1050px) {
+}
+
+@media (max-width: 500px) {
+  .projectContainer{
+  }
+  .project{
+    width: 275px;
+    position: relative;
+    height: 500px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
 }

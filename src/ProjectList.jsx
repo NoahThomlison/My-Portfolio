@@ -50,7 +50,7 @@ function ProjectList({projects, theme}) {
     <ThemeProvider theme={theme}>
       <Filter buttonClick={buttonClick} accordianClick={accordianClick} expanded={expanded} filter={filter}></Filter>
         <div className="section aboutMeImage work">
-          <Container sx={{display: "Flex", justifyContent:"space-between", alignItems:"center", width:"90%"}}>
+          <Container className="projectContainer">
             {projectSlides[slideIndex-1] ? 
             <IconButton className="arrow" color="primary" onClick={() => setSlideIndex(slideIndex-1)}><ArrowBackIosNewIcon/></IconButton>
             :
