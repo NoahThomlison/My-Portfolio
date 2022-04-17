@@ -15,8 +15,8 @@ function Project({width, project, index}) {
   return (
     <Card className="project">
       <CardMedia
+        className="projectImage"
         component="img"
-        height="50%"
         image= {project.thumbnail[0]}
         alt="green iguana"
       />
@@ -24,7 +24,7 @@ function Project({width, project, index}) {
         <Typography gutterBottom variant="h7" component="div">
         {project.title}
         </Typography>
-        {width > 500 ? <div>
+        {width > 1150 ? <div>
         <Typography variant="body2" color="text.secondary">
         {project.description}
         </Typography>

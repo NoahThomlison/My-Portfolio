@@ -211,33 +211,45 @@ ul  {
 }
 
 .project{
-  width: 450px;
-  height: 350px;
+  width: 30%;
   margin: 10px;
   position: relative;
+  max-height: 350px;
 }
 
-@media only screen and (max-width: 1050px) {
+
+.projectImage{
+  height: 45%;
 }
 
-@media (max-width: 500px) {
-  .projectContainer{
-  }
+
+@media only screen and (max-width: 1150px) {
   .project{
-    width: 275px;
-    position: relative;
-    height: 265px;
+    width: 45%;
   }
+  .projectImage{
+    height: 60%;
+  }
+}
+
+@media only screen and (max-width : 650px) {
   .arrow{
     padding-left: 0;
     padding-right: 0;
   }
+  .project{
+    height: 350px;
+    width: 90%;
+    }
+
 }
 
-@media (max-width: 768px) {
+@media (min-width: 650px) and (max-width: 768px) {
   .project{
-    width: 275px;
-    position: relative;
-    height: 265px;
-  }
+    height: 325px;
+    width: 45%;
+    }
+    .projectImage{
+      height: 60%;
+    }
 }

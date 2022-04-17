@@ -13,10 +13,10 @@ function ProjectList({projects, theme}) {
   const { height, width } = useWindowDimensions();
 
   let projectPerSlide = 6
-  if(width < 1000 && width > 500){
+  if(width < 1150 && width > 500){
     projectPerSlide = 4;
   }
-  if(width < 500){
+  if(width < 650){
     projectPerSlide = 2;
   }
 
@@ -56,8 +56,6 @@ function ProjectList({projects, theme}) {
   console.log(`width: ${width} ~ height: ${height}`)
   console.log(`projectPerSlide: ${projectPerSlide}`)
 
-
-
   return (
     <ThemeProvider theme={theme}>
       <Filter buttonClick={buttonClick} accordianClick={accordianClick} expanded={expanded} filter={filter}></Filter>
@@ -68,7 +66,7 @@ function ProjectList({projects, theme}) {
             :
             <IconButton className="arrow" disabled color="primary"><ArrowBackIosNewIcon/></IconButton>
             }
-            <Box sx={{ display: "Flex", flexWrap: "wrap", justifyContent: "center", width:"90%"}}>
+            <Box className="projectList" sx={{ display: "Flex", flexWrap: "wrap", justifyContent: "center", width:"90%"}}>
               {projectSlides[slideIndex].map((project)=>{
                 return(
                   <Project width={width} project={project} image={project.image}></Project>
