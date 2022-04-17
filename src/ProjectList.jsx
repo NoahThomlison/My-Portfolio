@@ -50,11 +50,11 @@ function ProjectList({projects, theme}) {
     <ThemeProvider theme={theme}>
       <Filter buttonClick={buttonClick} accordianClick={accordianClick} expanded={expanded} filter={filter}></Filter>
         <div className="section aboutMeImage work">
-          <Box sx={{display: "Flex", justifyContent:"space-between", width:"90%"}}>
+          <Container sx={{display: "Flex", justifyContent:"space-between", alignItems:"center", width:"90%"}}>
             {projectSlides[slideIndex-1] ? 
-            <IconButton onClick={() => setSlideIndex(slideIndex-1)}><ArrowBackIosNewIcon/></IconButton>
+            <IconButton className="arrow" color="primary" onClick={() => setSlideIndex(slideIndex-1)}><ArrowBackIosNewIcon/></IconButton>
             :
-            <IconButton disabled ><ArrowBackIosNewIcon/></IconButton>
+            <IconButton className="arrow" disabled color="primary"><ArrowBackIosNewIcon/></IconButton>
             }
             <Box sx={{ display: "Flex", flexWrap: "wrap", justifyContent: "center", height: "100%", alignContent: "flex-start"}}>
               {projectSlides[slideIndex].map((project)=>{
@@ -64,11 +64,11 @@ function ProjectList({projects, theme}) {
                   })}
             </Box>
             {projectSlides[slideIndex+1] ? 
-            <IconButton onClick={() => setSlideIndex(slideIndex+1)}><ArrowForwardIosIcon/></IconButton>
+            <IconButton className="arrow" color="primary" onClick={() => setSlideIndex(slideIndex+1)}><ArrowForwardIosIcon/></IconButton>
             :
-            <IconButton disabled ><ArrowForwardIosIcon/></IconButton>
+            <IconButton className="arrow" color="primary" disabled ><ArrowForwardIosIcon/></IconButton>
             }
-          </Box>
+          </Container>
         </div>
     </ThemeProvider>
   )
