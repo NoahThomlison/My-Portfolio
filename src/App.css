@@ -205,14 +205,14 @@ ul  {
 
 .projectContainer{
   display: flex;
-  justify-content:space-between;
+  justify-content:center;
   align-items: center;
-  height: 100%;
+  width: 100%
 }
 
 .project{
-  width: 500px;
-  min-width: 300px;
+  width: 450px;
+  height: 350px;
   margin: 10px;
   position: relative;
 }
@@ -226,11 +226,18 @@ ul  {
   .project{
     width: 275px;
     position: relative;
-    height: 500px;
+    height: 265px;
   }
-
+  .arrow{
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 768px) {
-
+  .project{
+    width: 275px;
+    position: relative;
+    height: 265px;
+  }
 }

@@ -1,6 +1,6 @@
 import {Typography, CardMedia, Card, CardActions, CardContent, Button, Box, Link} from '@mui/material';
 
-function Project({project, index}) {
+function Project({width, project, index}) {
 
   let techStackList = project.techStack.map((stack, index) => {
     if(stack !== "Featured"){
@@ -24,10 +24,14 @@ function Project({project, index}) {
         <Typography gutterBottom variant="h7" component="div">
         {project.title}
         </Typography>
+        {width > 500 ? <div>
         <Typography variant="body2" color="text.secondary">
         {project.description}
         </Typography>
-        <br></br>
+        {/* <br></br> */}
+        </div>
+        : ""
+        }
         <Typography variant="body2" color="text.secondary">
         <strong>Stack:</strong> {techStackList.map((stack, index) => {
           return(stack)})}
