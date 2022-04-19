@@ -48,7 +48,6 @@
   background-size: cover;
 }
 
-
 .aboutMeImage {
   background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url("/src/images/CodingBackground.jpg");;
   background-size: cover;
@@ -87,6 +86,8 @@ body.fp-viewing-Work .filterBar{
   transition: opacity 1s;
   opacity: 100%;
   }
+
+/* About List CSS */
   
 .profileText{
     width: 75%;
@@ -159,10 +160,6 @@ body.fp-viewing-Work .filterBar{
 
 .flex-container > * {   flex: 1; }
 
-.buttonAccordian{
-display: flex;
-}
-
 .css-zqcytf-MuiButtonGroup-root{
   box-shadow: 0;
 }
@@ -171,9 +168,7 @@ display: flex;
   border-bottom: 2px solid rgba(194, 211, 203, 1)
 }
 
-.work{
-  padding-top: 85px !important;
-}
+
 
 ul  {
   margin-top: 0px;
@@ -190,6 +185,8 @@ ul  {
   padding-top: 5px;
 }
 
+/* Contact Section CSS */
+
 .form{
   width: 90%;
 }
@@ -197,6 +194,16 @@ ul  {
 .form-input{
   width: 100%;
 }
+
+/* Project List CSS */
+
+.work{
+  padding-top: 85px !important;
+}
+
+.buttonAccordian{
+  display: flex;
+  }
 
 .arrow{
   height: 100px;
@@ -216,7 +223,6 @@ ul  {
   position: relative;
   max-height: 350px;
 }
-
 
 .projectImage{
   height: 45%;
