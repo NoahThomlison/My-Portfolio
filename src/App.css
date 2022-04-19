@@ -251,8 +251,11 @@ ul  {
     padding-left: 0;
     padding-right: 0;
   }
+  .projectImage{
+    height: 50%;
+  }
   .project{
-    height: 350px;
+    height: 300px;
     width: 90%;
     }
 
