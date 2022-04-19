@@ -68,15 +68,10 @@ body.fp-viewing-Work .navBar{
   z-index: -2
   }
 
-body.fp-viewing-About .navBar{ 
-  opacity: 90%;
-  transition: opacity 1s;
-  z-index: -2
-  }
-    
 body.fp-viewing-About .filterBar{ 
   transition: opacity .5s;
   opacity: 0%;
+
   }
 body.fp-viewing-Intro .filterBar{ 
   transition: opacity .5s;
@@ -86,6 +81,19 @@ body.fp-viewing-Work .filterBar{
   transition: opacity 1s;
   opacity: 100%;
   }
+
+@media (max-width: 768px) {
+  body.fp-viewing-ContactForm .navBar{ 
+    opacity: 90%;
+    transition: opacity 1s;
+    z-index: -2
+  }
+  body.fp-viewing-About .navBar{ 
+    opacity: 90%;
+    transition: opacity 1s;
+    z-index: -2
+    }
+}
 
 /* About List CSS */
   
