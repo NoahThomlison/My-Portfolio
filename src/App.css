@@ -247,10 +247,10 @@ ul  {
 
 @media only screen and (max-width : 768px) {
   .projectImage{
-    height: 50%
+    height: 45%
   }
   .projectAndButtonContainer{
-    height: 90vh
+    height: 80vh
   }
   .projectListContainer{
     flex-direction: column;

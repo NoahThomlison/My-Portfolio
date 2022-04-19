@@ -1,6 +1,10 @@
 import { Box, Typography, ThemeProvider} from '@mui/material';
+import useWindowDimensions from './useWindowDimensions';
+
 
 function Education({theme}) {
+  const { height, width } = useWindowDimensions();
+
   return (
     <ThemeProvider theme={theme}>
       <Box>
@@ -16,7 +20,7 @@ function Education({theme}) {
         </Box>
         <ul>
           <li><Typography>Work in a multi-disciplined team to develop commercial high-end security cameras</Typography></li>
-          <li><Typography>Coordinate with international suppliers to source and plan project timelines</Typography></li>
+          {width > 768 ? <li><Typography>Coordinate with international suppliers to source and plan project timelines</Typography></li> : ""}
         </ul>
       </Box>
 
@@ -34,7 +38,7 @@ function Education({theme}) {
         <Box sx={{display: "flex", justifyContent: "space-between"}} className="aboutContent">
         <ul>
           <li><Typography>Design large scale-forestry equipment and machinery</Typography></li>
-          <li><Typography>Creation of project plans with project managers</Typography></li>
+          {width > 768 ? <li><Typography>Creation of project plans with project managers</Typography></li> : ""}      
         </ul>
         </Box> 
       </Box>
@@ -52,7 +56,7 @@ function Education({theme}) {
         </Box>
         <ul>
           <li><Typography>Design, sourcing and testing of consumer sporting goods</Typography></li>
-          <li><Typography>Manage projects for new products, lead design meetings and product kickoff meetings</Typography></li>
+          {width > 768 ? <li><Typography>Manage projects for new products, lead design meetings and product kickoff meetings</Typography></li> : ""}          
         </ul>
       </Box>
     </ThemeProvider>
