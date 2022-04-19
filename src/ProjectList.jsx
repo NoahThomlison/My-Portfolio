@@ -13,10 +13,7 @@ function ProjectList({projects, theme}) {
   const { height, width } = useWindowDimensions();
 
   let projectPerSlide = 6
-  if(width < 1150 && width > 500){
-    projectPerSlide = 4;
-  }
-  if(width < 650){
+  if(width < 768){
     projectPerSlide = 2;
   }
 
@@ -60,13 +57,13 @@ function ProjectList({projects, theme}) {
     <ThemeProvider theme={theme}>
         <div className="section aboutMeImage work">
           <Filter buttonClick={buttonClick} accordianClick={accordianClick} expanded={expanded} filter={filter}></Filter>
-          <Box sx={{position: "absolute", top: "85px"}} className="projectContainer">
+          <Box className="projectAndButtonContainer">
             {projectSlides[slideIndex-1] ? 
             <IconButton className="arrow" color="primary" onClick={() => setSlideIndex(slideIndex-1)}><ArrowBackIosNewIcon/></IconButton>
             :
             <IconButton className="arrow" disabled color="primary"><ArrowBackIosNewIcon/></IconButton>
             }
-            <Box className="projectList" sx={{ display: "Flex", flexWrap: "wrap", justifyContent: "center", width:"90%"}}>
+            <Box className="projectListContainer">
               {projectSlides[slideIndex].map((project)=>{
                 return(
                   <Project width={width} project={project} image={project.image}></Project>

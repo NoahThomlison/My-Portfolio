@@ -13,6 +13,7 @@ function Project({width, project, index}) {
     }})
 
   return (
+  // <Box sx={{width: "30%", height: "40%"}}>
     <Card className="project">
       <CardMedia
         className="projectImage"
@@ -45,6 +46,7 @@ function Project({width, project, index}) {
       </CardActions>
       </Box>
     </Card>
+    // </Box>
   )
 }
 
