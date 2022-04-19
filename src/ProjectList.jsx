@@ -58,9 +58,9 @@ function ProjectList({projects, theme}) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Filter buttonClick={buttonClick} accordianClick={accordianClick} expanded={expanded} filter={filter}></Filter>
         <div className="section aboutMeImage work">
-          <Box className="projectContainer">
+          <Filter buttonClick={buttonClick} accordianClick={accordianClick} expanded={expanded} filter={filter}></Filter>
+          <Box sx={{position: "absolute", top: "85px"}} className="projectContainer">
             {projectSlides[slideIndex-1] ? 
             <IconButton className="arrow" color="primary" onClick={() => setSlideIndex(slideIndex-1)}><ArrowBackIosNewIcon/></IconButton>
             :
@@ -78,7 +78,7 @@ function ProjectList({projects, theme}) {
             :
             <IconButton className="arrow" color="primary" disabled ><ArrowForwardIosIcon/></IconButton>
             }
-          </Box>
+        </Box>
         </div>
     </ThemeProvider>
   )
