@@ -226,39 +226,16 @@ ul  {
 }
 
 .projectListContainer{
-  height: inherit;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  width: inherit;
 }
 
 .project{
-  width: 30%;
-  margin: 10px;
   position: relative;
+  min-height: 40vh;
+  width: 100%;
 }
 
 .projectImage{
   height: 100px;
   object-fit: contain;
-}
-
-
-@media only screen and (max-width : 768px) {
-  .projectImage{
-    height: 45%
-  }
-  .projectAndButtonContainer{
-    height: 80vh
-  }
-  .projectListContainer{
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-evenly;
-  }
-  .project{
-    width: 95%;
-    height: 45%;
-  }
 }
