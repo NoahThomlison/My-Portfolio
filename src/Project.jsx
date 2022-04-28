@@ -1,4 +1,4 @@
-import {Typography, CardMedia, Card, CardActions, CardContent, Button, Box, Link} from '@mui/material';
+import {Typography, CardMedia, Card, CardActions, CardContent, Button, Box, Link } from '@mui/material';
 
 function Project({width, project, index}) {
 
@@ -13,7 +13,6 @@ function Project({width, project, index}) {
     }})
 
   return (
-  // <Box sx={{width: "30%", height: "40%"}}>
     <Card className="project">
       <CardMedia
         className="projectImage"
@@ -25,14 +24,9 @@ function Project({width, project, index}) {
         <Typography gutterBottom variant="h7" component="div">
         {project.title}
         </Typography>
-        {width > 1150 ? <div>
         <Typography variant="body2" color="text.secondary">
         {project.description}
         </Typography>
-        {/* <br></br> */}
-        </div>
-        : ""
-        }
         <Typography variant="body2" color="text.secondary">
         <strong>Stack:</strong> {techStackList.map((stack, index) => {
           return(stack)})}
@@ -46,7 +40,6 @@ function Project({width, project, index}) {
       </CardActions>
       </Box>
     </Card>
-    // </Box>
   )
 }
 
