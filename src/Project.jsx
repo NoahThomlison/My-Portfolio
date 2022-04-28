@@ -24,9 +24,13 @@ function Project({width, project, index}) {
         <Typography gutterBottom variant="h7" component="div">
         {project.title}
         </Typography>
+        {width > 600 ? <div>
         <Typography variant="body2" color="text.secondary">
         {project.description}
         </Typography>
+        </div>
+        : ""
+        }
         <Typography variant="body2" color="text.secondary">
         <strong>Stack:</strong> {techStackList.map((stack, index) => {
           return(stack)})}
