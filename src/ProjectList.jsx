@@ -1,4 +1,4 @@
-import {Typography, Container, Box, ThemeProvider, Button, IconButton } from '@mui/material';
+import {Typography, Container, Box, ThemeProvider, Button, IconButton, Grid } from '@mui/material';
 import Filter from "./Filter"
 import Project from "./Project"
 import React, { useState, useEffect } from 'react';
@@ -13,7 +13,10 @@ function ProjectList({projects, theme}) {
   const { height, width } = useWindowDimensions();
 
   let projectPerSlide = 6
-  if(width < 768){
+  if(width < 1200){
+    projectPerSlide = 4;
+  }
+  if(width < 900){
     projectPerSlide = 2;
   }
 
@@ -63,13 +66,15 @@ function ProjectList({projects, theme}) {
             :
             <IconButton className="arrow" disabled color="primary"><ArrowBackIosNewIcon/></IconButton>
             }
-            <Box className="projectListContainer">
+            <Grid container spacing={2} className="projectListContainer">
               {projectSlides[slideIndex].map((project)=>{
                 return(
-                  <Project width={width} project={project} image={project.image}></Project>
+                  <Grid item lg={4} md={6} sm={12} sx={{width:"100%"}}>
+                    <Project width={width} project={project} image={project.image}></Project>
+                  </Grid>
                 )
                   })}
-            </Box>
+            </Grid>
             {projectSlides[slideIndex+1] ? 
             <IconButton className="arrow" color="primary" onClick={() => setSlideIndex(slideIndex+1)}><ArrowForwardIosIcon/></IconButton>
             :
