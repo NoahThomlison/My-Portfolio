@@ -13,13 +13,22 @@ function Project({width, project, index}) {
     }})
 
   return (
-    <Card className="project">
+    <div className="project flip-card">
+      {/* <div class="flip-card"> */}
+      <div class="flip-card-inner">
+
+      <div className="flip-card-front">
+                <Typography gutterBottom variant="h7" component="div">
+        {project.title}
+        </Typography>
       <CardMedia
         className="projectImage"
         component="img"
         image= {project.thumbnail[0]}
         alt="green iguana"
       />
+      </div>
+      <div className="flip-card-back">
       <CardContent>
         <Typography gutterBottom variant="h7" component="div">
         {project.title}
@@ -43,7 +52,11 @@ function Project({width, project, index}) {
         </Link>
       </CardActions>
       </Box>
-    </Card>
+      </div>
+      {/* </div> */}
+      </div>
+
+    </div>
   )
 }
 
