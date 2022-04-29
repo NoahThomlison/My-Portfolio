@@ -62,11 +62,15 @@ function ProjectList({projects, theme}) {
           <Filter buttonClick={buttonClick} accordianClick={accordianClick} expanded={expanded} filter={filter}></Filter>
           <Box className="projectAndButtonContainer">
             {projectSlides[slideIndex-1] ? 
-            <IconButton className="arrow" color="primary" onClick={() => setSlideIndex(slideIndex-1)}><ArrowBackIosNewIcon/></IconButton>
+            <span className="buttonContainerGo">
+              <IconButton className="arrow" color="primary" onClick={() => setSlideIndex(slideIndex-1)}><ArrowBackIosNewIcon/></IconButton>
+            </span>
             :
-            <IconButton className="arrow" disabled color="primary"><ArrowBackIosNewIcon/></IconButton>
+            <span className="buttonContainerNoGo">
+              <IconButton className="arrow" disabled color="primary"><ArrowBackIosNewIcon/></IconButton>
+            </span>
             }
-            <Container className="projectListContainer">
+            <Container className="projectListContainer" sx={{marginLeft: "0px", marginRight:"0px"}}>
               <Grid container spacing={2} >
                 {projectSlides[slideIndex].map((project)=>{
                   return(
@@ -78,9 +82,14 @@ function ProjectList({projects, theme}) {
               </Grid>
             </Container>
             {projectSlides[slideIndex+1] ? 
-            <IconButton className="arrow" color="primary" onClick={() => setSlideIndex(slideIndex+1)}><ArrowForwardIosIcon/></IconButton>
+            <span className="buttonContainerGo">
+              <IconButton className="arrow" color="primary" onClick={() => setSlideIndex(slideIndex+1)}><ArrowForwardIosIcon/></IconButton>
+            </span>
             :
-            <IconButton className="arrow" color="primary" disabled ><ArrowForwardIosIcon/></IconButton>
+            <span className="buttonContainerNoGo">
+              <IconButton className="arrow" color="primary" disabled ><ArrowForwardIosIcon/></IconButton>
+            </span>
+
             }
         </Box>
         </div>
