@@ -1,4 +1,4 @@
-import {Typography, CardMedia, Card, CardActions, CardContent, Button, Box, Link } from '@mui/material';
+import {Typography, CardMedia, Card, CardActions, CardContent, Button, Box, Link, Paper } from '@mui/material';
 
 function Project({width, project, index}) {
 
@@ -13,50 +13,50 @@ function Project({width, project, index}) {
     }})
 
   return (
-    <div className="project flip-card">
-      {/* <div class="flip-card"> */}
-      <div class="flip-card-inner">
-
-      <div className="flip-card-front">
-                <Typography gutterBottom variant="h7" component="div">
-        {project.title}
-        </Typography>
-      <CardMedia
-        className="projectImage"
-        component="img"
-        image= {project.thumbnail[0]}
-        alt="green iguana"
-      />
-      </div>
-      <div className="flip-card-back">
-      <CardContent>
-        <Typography gutterBottom variant="h7" component="div">
-        {project.title}
-        </Typography>
-        {width > 600 ? <div>
-        <Typography variant="body2" color="text.secondary">
-        {project.description}
-        </Typography>
-        </div>
-        : ""
-        }
-        <Typography variant="body2" color="text.secondary">
-        <strong>Stack:</strong> {techStackList.map((stack, index) => {
-          return(stack)})}
-        </Typography>
-      </CardContent>
-      <Box sx={{position: "absolute", bottom: "0px"}}>
-      <CardActions>
-        <Link href={project.githubLink} underline="none">
-        <Button size="small" variant="outlined">View on Github</Button>
-        </Link>
-      </CardActions>
-      </Box>
-      </div>
-      {/* </div> */}
-      </div>
-
-    </div>
+    <Box className="project flip-card" >
+      <Paper class="flip-card-inner">
+        <Box className="flip-card-front" sx={{borderRadius: "5px"}}>
+        <CardContent>
+          <Typography gutterBottom variant="h6" component="div">
+            {project.title}
+          </Typography>
+        </CardContent>
+          <CardMedia
+            className="projectImage"
+            component="img"
+            image= {project.thumbnail[0]}
+            alt="green iguana"
+          />
+        </Box>
+        <Box className="flip-card-back" sx={{borderRadius: "5px"}}>
+          <CardContent>
+            <Typography gutterBottom variant="h6" component="div" className="flip-card-back-text">
+              {project.title}
+            </Typography>
+            {width > 600 ? 
+              <div>
+                <Typography variant="body2" color="text.secondary" className="flip-card-back-text">
+                  {project.description}
+                </Typography>
+              </div>
+            :  
+            ""}
+            <br></br>
+            <Typography variant="body2" color="text.primary" className="flip-card-back-text">
+              <strong>Stack:</strong> {techStackList.map((stack, index) => {
+                return(stack)})}
+            </Typography>
+          </CardContent>
+          <Box sx={{position: "absolute", bottom: "0px"}}>
+            <CardActions>
+              <Link href={project.githubLink} underline="none">
+              <Button size="small" variant="outlined">View on Github</Button>
+              </Link>
+            </CardActions>
+          </Box>
+        </Box>
+      </Paper>
+    </Box>
   )
 }
 
