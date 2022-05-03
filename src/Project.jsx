@@ -33,15 +33,11 @@ function Project({width, project, index}) {
             <Typography gutterBottom variant="h6" component="div" className="flip-card-back-text">
               {project.title}
             </Typography>
-            {width > 600 ? 
               <div>
                 <Typography variant="body2" color="text.secondary" className="flip-card-back-text">
                   {project.description}
                 </Typography>
               </div>
-            :  
-            ""}
-            <br></br>
             <Typography variant="body2" color="text.primary" className="flip-card-back-text">
               <strong>Stack:</strong> {techStackList.map((stack, index) => {
                 return(stack)})}
