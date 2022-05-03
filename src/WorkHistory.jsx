@@ -13,14 +13,14 @@ function Education({theme}) {
         </Box>
         <Box sx={{display: "flex", justifyContent: "space-between"}} className="aboutContent">
           <Box>
-            <Typography>Mechanical Design Engineer</Typography>
-            <Typography>Vancouver, British Columbia</Typography>
+            <Typography className="aboutTextPadding">Mechanical Design Engineer</Typography>
+            <Typography className="aboutTextPadding">Vancouver, British Columbia</Typography>
           </Box>
-          <Typography>May 2021 to Current</Typography>
+          <Typography>May 2021 - Current</Typography>
         </Box>
         <ul>
-          <li><Typography>Work in a multi-disciplined team to develop commercial high-end security cameras</Typography></li>
-          {width > 768 ? <li><Typography>Coordinate with international suppliers to source and plan project timelines</Typography></li> : ""}
+          <li><Typography className="aboutTextPadding">Work in a multi-disciplined team to develop commercial high-end security cameras</Typography></li>
+          {width > 768 ? <li><Typography className="aboutTextPadding">Coordinate with international suppliers to source and plan project timelines</Typography></li> : ""}
         </ul>
       </Box>
 
@@ -30,15 +30,15 @@ function Education({theme}) {
         </Box>
         <Box sx={{display: "flex", justifyContent: "space-between"}} className="aboutContent">
           <Box>
-            <Typography>Mechanical Design Engineer</Typography>
-            <Typography>Abbotsford, British Columbia</Typography>
+            <Typography className="aboutTextPadding">Mechanical Design Engineer</Typography>
+            <Typography className="aboutTextPadding"> Abbotsford, British Columbia</Typography>
           </Box>
-          <Typography>May 2019​ to May 2021​</Typography>
+          <Typography>May 2019​ - May 2021​</Typography>
         </Box>
         <Box sx={{display: "flex", justifyContent: "space-between"}} className="aboutContent">
         <ul>
-          <li><Typography>Design large scale-forestry equipment and machinery</Typography></li>
-          {width > 768 ? <li><Typography>Creation of project plans with project managers</Typography></li> : ""}      
+          <li><Typography className="aboutTextPadding">Design large scale-forestry equipment and machinery</Typography></li>
+          {width > 768 ? <li><Typography className="aboutTextPadding">Creation of project plans with project managers</Typography></li> : ""}      
         </ul>
         </Box> 
       </Box>
@@ -49,14 +49,14 @@ function Education({theme}) {
         </Box>
         <Box sx={{display: "flex", justifyContent: "space-between"}} className="aboutContent">
           <Box>
-            <Typography>Design Engineer</Typography>
-            <Typography>Chilliwack, British Columbia</Typography>
+            <Typography className="aboutTextPadding">Design Engineer</Typography>
+            <Typography className="aboutTextPadding">Chilliwack, British Columbia</Typography>
           </Box>
-          <Typography>May 2016​ to May 2019​</Typography>
+          <Typography>May 2016​ - May 2019​</Typography>
         </Box>
         <ul>
-          <li><Typography>Design, sourcing and testing of consumer sporting goods</Typography></li>
-          {width > 768 ? <li><Typography>Manage projects for new products, lead design meetings and product kickoff meetings</Typography></li> : ""}          
+          <li><Typography className="aboutTextPadding">Design, sourcing and testing of consumer sporting goods</Typography></li>
+          {width > 768 ? <li><Typography className="aboutTextPadding">Manage projects for new products, lead design meetings and product kickoff meetings</Typography></li> : ""}          
         </ul>
       </Box>
     </ThemeProvider>
