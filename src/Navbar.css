@@ -1,0 +1,43 @@
+/* navbar styling */
+
+.navbar{
+  width: 100%;
+  height: 75px;
+  top: 0;
+  position: absolute;
+  z-index: 1;
+  background-color: aqua;
+  opacity: 0.8;
+}
+
+body.fp-viewing-Work .navBar{ 
+  opacity: 0%;
+  z-index: -2
+  }
+
+body.fp-viewing-About .filterBar{ 
+  transition: opacity .5s;
+  opacity: 0%;
+
+  }
+body.fp-viewing-Intro .filterBar{ 
+  transition: opacity .5s;
+  opacity: 0%;
+  }
+body.fp-viewing-Work .filterBar{ 
+  transition: opacity 1s;
+  opacity: 100%;
+  }
+
+@media (max-width: 768px) {
+  body.fp-viewing-ContactForm .navBar{ 
+    opacity: 90%;
+    transition: opacity 1s;
+    z-index: -2
+  }
+  body.fp-viewing-About .navBar{ 
+    opacity: 90%;
+    transition: opacity 1s;
+    z-index: -2
+    }
+}
