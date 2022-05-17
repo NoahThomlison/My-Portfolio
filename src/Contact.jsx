@@ -70,11 +70,11 @@ function Contact({theme}) {
             </Box>
             <form className="form" onSubmit={handleSubmit}>
             <Box sx={{display: "flex", flexDirection: "column", justifyContent: "space-evenly", alignItems: "center", padding: ".75em", minHeight: "500px"}}>
-              <TextField type="text" name="name" id="name" className="form-input" label="Name" value={formData.name} onChange={handleChange}/>
+              <TextField sx={{width: "75vw"}} type="text" name="name" id="name" className="form-input" label="Name" value={formData.name} onChange={handleChange}/>
               {errors.name && <p>{errors.name}</p>}
-              <TextField type="email" name="email" id="email" className="form-input" label="Email" value={formData.email} onChange={handleChange}/>
+              <TextField sx={{width: "75vw"}} type="email" name="email" id="email" className="form-input" label="Email" value={formData.email} onChange={handleChange}/>
               {errors.email && <p>{errors.email}</p>}
-              <TextField name="message" id="message" className="form-input" label="Your Message" value={formData.message} multiline rows={4} onChange={handleChange} />
+              <TextField sx={{width: "75vw"}} name="message" id="message" className="form-input" label="Your Message" value={formData.message} multiline rows={4} onChange={handleChange} />
               {errors.message && <p>{errors.message}</p>}
               <Button type="submit" variant="outlined" className="form-input-btn">Submit</Button>
               </Box>
@@ -87,9 +87,3 @@ function Contact({theme}) {
 }
 
 export default Contact;
-
-{/* <form onChange={(e) => handleSubmit(e)} name="contact" method="post"  data-netlify="true" data-netlify-honeypot="bot-field">
-<TextField sx={{minWidth: "90%"}} onChange={(e) => handleChange(e, "name")} value={name} label="name" type="name"/> 
-<TextField sx={{minWidth: "90%"}} onChange={(e) => handleChange(e, "email")} value={email} label="email" type="email"/> 
-<TextField sx={{minWidth: "90%"}} onChange={(e) => handleChange(e, "message")} value={message} label="message" name="message" multiline rows={4}/>
-              <Button type="submit" sx={{minWidth: "25%"}} variant="outlined">Submit</Button>  */}
