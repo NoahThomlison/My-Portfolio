@@ -7,12 +7,6 @@ import {projects} from './projectData.js'
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import Contact from "./Contact"
 
-import './App.css'
-import './Project.css'
-import './About.css'
-import './About.css'
-import './Navbar.css'
-
 function App() {
   
   const anchors = ["Intro", "About", "Work", "ContactForm"];

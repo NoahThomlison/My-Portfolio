@@ -14,7 +14,7 @@ function Project({width, project, index}) {
 
   return (
     <Box className="project flip-card" >
-      <Paper class="flip-card-inner">
+      <Paper className="flip-card-inner">
         <Box className="flip-card-front" sx={{borderRadius: "5px"}}>
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
