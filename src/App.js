@@ -3,11 +3,13 @@ import NavBar from './navBar.jsx';
 import Intro from './Intro.jsx'
 import AboutList from './AboutList.jsx'
 import ProjectList from './ProjectList.jsx'
-import './App.css'
-import './Project.css'
 import {projects} from './projectData.js'
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import Contact from "./Contact"
+
+import './App.css'
+import './Project.css'
+import './About.css'
 
 function App() {
   
