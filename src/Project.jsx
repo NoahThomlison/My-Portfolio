@@ -1,4 +1,4 @@
-import {Typography, CardMedia, Card, CardActions, CardContent, Button, Box, Link, Paper } from '@mui/material';
+import {Typography, CardMedia, CardActions, CardContent, Button, Box, Link, Paper } from '@mui/material';
 
 function Project({width, project, index}) {
 

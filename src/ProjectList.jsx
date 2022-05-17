@@ -1,4 +1,4 @@
-import {Typography, Container, Box, ThemeProvider, Button, IconButton, Grid} from '@mui/material';
+import {Container, Box, ThemeProvider, IconButton, Grid} from '@mui/material';
 import Filter from "./Filter"
 import Project from "./Project"
 import React, { useState, useEffect } from 'react';

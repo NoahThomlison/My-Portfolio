@@ -2,7 +2,7 @@ import { Box, Typography, ThemeProvider} from '@mui/material';
 import useWindowDimensions from './useWindowDimensions';
 
 function Education({theme}) {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <ThemeProvider theme={theme}>
