@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import './styles/index.css';
-import './styles/App.css'
-import './styles/Project.css'
-import './styles/About.css'
-import './styles/About.css'
-import './styles/Navbar.css'
+require('./styles/index.css');
+require('./styles/App.css');
+require('./styles/Project.css');
+require('./styles/About.css');
+require('./styles/Navbar.css');
+
 
 ReactDOM.render(
   <React.StrictMode>
