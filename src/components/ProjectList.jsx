@@ -4,7 +4,7 @@ import Project from "./Project"
 import React, { useState, useEffect } from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import useWindowDimensions from '../useWindowDimensions';
+import useWindowDimensions from '../helpers/useWindowDimensions';
 
 function ProjectList({projects, theme}) {
   const [filter, setFilter] = useState("React");

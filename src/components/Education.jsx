@@ -1,5 +1,5 @@
 import { Box, Typography, ThemeProvider} from '@mui/material';
-import useWindowDimensions from '../useWindowDimensions';
+import useWindowDimensions from '../helpers/useWindowDimensions';
 
 function Education({theme}) {
   const { width } = useWindowDimensions();

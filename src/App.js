@@ -3,7 +3,7 @@ import NavBar from './components/navBar.jsx';
 import Intro from './components/Intro.jsx'
 import AboutList from './components/AboutList.jsx'
 import ProjectList from './components/ProjectList.jsx'
-import {projects} from './projectData.js'
+import {projects} from './staticData/projectData.js'
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import Contact from "./components/Contact"
 
