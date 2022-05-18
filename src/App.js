@@ -1,11 +1,11 @@
 import ReactFullpage, {fullpage_api} from '@fullpage/react-fullpage';
-import NavBar from './navBar.jsx';
-import Intro from './Intro.jsx'
-import AboutList from './AboutList.jsx'
-import ProjectList from './ProjectList.jsx'
+import NavBar from './components/navBar.jsx';
+import Intro from './components/Intro.jsx'
+import AboutList from './components/AboutList.jsx'
+import ProjectList from './components/ProjectList.jsx'
 import {projects} from './projectData.js'
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
-import Contact from "./Contact"
+import Contact from "./components/Contact"
 
 function App() {
   

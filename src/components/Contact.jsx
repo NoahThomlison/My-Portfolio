@@ -63,18 +63,18 @@ function Contact({theme}) {
   return (
     <div className="section aboutMeImage">
       <ThemeProvider theme={theme}>
-        <Container sx={{}}>
+        <Container>
           <Paper sx={{display: "flex", flexDirection: "column", justifyContent: "space-evenly", alignItems: "center", padding: ".75em", minHeight: "500px"}}>
             <Box className="underline" sx={{width:"100%", display:"flex", justifyContent: "center"}} >
               <Typography variant="h6">Contact</Typography>
             </Box>
             <form className="form" onSubmit={handleSubmit}>
             <Box sx={{display: "flex", flexDirection: "column", justifyContent: "space-evenly", alignItems: "center", padding: ".75em", minHeight: "500px"}}>
-              <TextField sx={{width: "75vw"}} type="text" name="name" id="name" className="form-input" label="Name" value={formData.name} onChange={handleChange}/>
+              <TextField sx={{width: "60vw"}} type="text" name="name" id="name" className="form-input" label="Name" value={formData.name} onChange={handleChange}/>
               {errors.name && <p>{errors.name}</p>}
-              <TextField sx={{width: "75vw"}} type="email" name="email" id="email" className="form-input" label="Email" value={formData.email} onChange={handleChange}/>
+              <TextField sx={{width: "60vw"}} type="email" name="email" id="email" className="form-input" label="Email" value={formData.email} onChange={handleChange}/>
               {errors.email && <p>{errors.email}</p>}
-              <TextField sx={{width: "75vw"}} name="message" id="message" className="form-input" label="Your Message" value={formData.message} multiline rows={4} onChange={handleChange} />
+              <TextField sx={{width: "60vw"}} name="message" id="message" className="form-input" label="Your Message" value={formData.message} multiline rows={4} onChange={handleChange} />
               {errors.message && <p>{errors.message}</p>}
               <Button type="submit" variant="outlined" className="form-input-btn">Submit</Button>
               </Box>

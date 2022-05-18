@@ -20,7 +20,7 @@ function AboutList({theme}) {
       <Container>
         <Paper sx={{display: "flex", justifyContent: "center", alignItems: "center", padding: ".75em"}}>
           <Box sx={{padding: "1em", width: "40%", maxHeight: "500px"}} className="profilePictureBox">
-            <img alt="not found" src={require('./images/profilePic.jpg')} className="profilePicture"/>
+            <img alt="not found" src={require('../images/profilePic.jpg')} className="profilePicture"/>
           </Box>
           <Box className="profileText">
             <Box className="buttons">
