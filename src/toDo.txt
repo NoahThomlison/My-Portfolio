@@ -1,20 +1,15 @@
 To do:
-
-2 - adds tabs to about me page
-    about me, work experiance, education
-
 3 - add timeline to about me page
-
 4 - add modal to projects page to show more information
     add button to expand modal to projects
     fullsize gif
     project description
-
-6 - add a contact me form
-
-7 - add animations for mounting projects
-
+8 - update styling for more professional look
+9 - reduce text on about
 
 Completed:
 1 - update about me to be useable
 1 - mobile friendly
+2 - adds tabs to about me page about me, work experiance, education
+6 - add a contact me form
+7 - add animations for mounting projects
