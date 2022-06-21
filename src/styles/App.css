@@ -47,3 +47,25 @@
   background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url("/src/images/Picture2.jpg");;
   background-size: cover;
 }
+
+.button{
+  border-color: #FFFFFF !important;
+  color: #FFFFFF !important
+}
+
+.buttonLeft{
+}
+
+.buttonMiddle{
+  margin-right: 20px !important;
+  margin-left: 20px !important;
+}
+
+.buttonRight{
+}
+
+.buttonContainer{
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}

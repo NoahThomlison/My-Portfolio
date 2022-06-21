@@ -14,10 +14,10 @@ const Intro = ({fullpageApi, theme}) => {
             <Typography variant="h4">
               JS, React, Python, Ruby.        
             </Typography>
-            <Box sx={{display:"flex", marginTop: "15px"}}>
-              <Button variant="outlined" onClick={() => fullpageApi.moveTo(2)}  sx={{marginRight: "20px", borderColor:"#FFFFFF"}}>About me</Button>
-              <Button variant="outlined" onClick={() => fullpageApi.moveTo(3)}  sx={{borderColor:"#FFFFFF"}}>My Work</Button>
-              <Button variant="outlined" onClick={() => fullpageApi.moveTo(4) } sx={{marginLeft: "20px", borderColor:"#FFFFFF"}}>Contact me</  Button>
+            <Box className="buttonContainer" >
+              <Button variant="outlined" onClick={() => fullpageApi.moveTo(2)} className="buttonLeft button">About me</Button>
+              <Button variant="outlined" onClick={() => fullpageApi.moveTo(3)} className="buttonMiddle button">My Work</Button>
+              <Button variant="outlined" onClick={() => fullpageApi.moveTo(4) } className="buttonRight button" >Contact me</  Button>
             </Box>
         </Container>
     </ThemeProvider>
