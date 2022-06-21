@@ -14,8 +14,8 @@ function Project({width, project, index}) {
 
   return (
     <Box className="project flip-card" >
-      <Paper className="flip-card-inner">
-        <Box className="flip-card-front" sx={{borderRadius: "5px"}}>
+      <Box className="flip-card-inner">
+        <Box className="flip-card-front">
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
             {project.title}
@@ -28,7 +28,7 @@ function Project({width, project, index}) {
             alt="green iguana"
           />
         </Box>
-        <Box className="flip-card-back" sx={{borderRadius: "5px"}}>
+        <Box className="flip-card-back">
           <CardContent>
             <Typography gutterBottom variant="h6" component="div" className="flip-card-back-text">
               {project.title}
@@ -51,7 +51,7 @@ function Project({width, project, index}) {
             </CardActions>
           </Box>
         </Box>
-      </Paper>
+      </Box>
     </Box>
   )
 }
