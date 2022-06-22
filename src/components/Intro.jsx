@@ -15,9 +15,9 @@ const Intro = ({fullpageApi, theme}) => {
               JS, React, Python, Ruby.        
             </Typography>
             <Box className="buttonContainer" >
-              <Button variant="outlined" onClick={() => fullpageApi.moveTo(2)} className="buttonLeft button">About me</Button>
-              <Button variant="outlined" onClick={() => fullpageApi.moveTo(3)} className="buttonMiddle button">My Work</Button>
-              <Button variant="outlined" onClick={() => fullpageApi.moveTo(4) } className="buttonRight button" >Contact me</  Button>
+              <Button variant="contained" onClick={() => fullpageApi.moveTo(2)} className="buttonLeft button">About me</Button>
+              <Button variant="contained" onClick={() => fullpageApi.moveTo(3)} className="buttonMiddle button">My Work</Button>
+              <Button variant="contained" onClick={() => fullpageApi.moveTo(4) } className="buttonRight button" >Contact me</  Button>
             </Box>
         </Container>
     </ThemeProvider>
