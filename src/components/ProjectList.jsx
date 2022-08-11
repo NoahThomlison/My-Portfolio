@@ -71,7 +71,7 @@ function ProjectList({projects, theme}) {
             </span>
             }
             <Container className="projectListContainer" sx={{marginLeft: "0px", marginRight:"0px"}}>
-              <Grid container spacing={2} >
+              <Grid container  className="projectListContainer" spacing={2} >
                 {projectSlides[slideIndex].map((project)=>{
                   return(
                     <Grid item lg={4} md={6} sm={12} sx={{width:"100%"}}>
