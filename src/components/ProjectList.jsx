@@ -51,7 +51,7 @@ function ProjectList({ projects, theme }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="section aboutMeImage work">
+      <div className="section aboutMeImage">
         <Filter
           buttonClick={buttonClick}
           accordianClick={accordianClick}

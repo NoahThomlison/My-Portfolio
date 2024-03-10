@@ -18,12 +18,13 @@ body.fp-viewing-Work .navBar{
 body.fp-viewing-About .filterBar{ 
   transition: opacity .5s;
   opacity: 0%;
-
   }
+
 body.fp-viewing-Intro .filterBar{ 
   transition: opacity .5s;
   opacity: 0%;
   }
+  
 body.fp-viewing-Work .filterBar{ 
   transition: opacity 1s;
   opacity: 100%;

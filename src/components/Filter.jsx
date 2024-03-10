@@ -31,14 +31,6 @@ function Filter({ buttonClick, accordianClick, expanded, filter }) {
   return (
     <Container
       className="filterBar"
-      sx={{
-        top: "0px",
-        position: "absolute",
-        zIndex: "10",
-        paddingTop: "20px",
-        left: "50%",
-        transform: "translate(-50%, 0);",
-      }}
     >
       <Accordion expanded={expanded} onClick={() => accordianClick(expanded)}>
         <AccordionSummary
