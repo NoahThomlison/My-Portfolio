@@ -1,67 +1,52 @@
-import { Box, Typography, ThemeProvider} from '@mui/material';
-import useWindowDimensions from '../helpers/useWindowDimensions';
+import { Box, Typography } from "@mui/material";
+import useWindowDimensions from "../helpers/useWindowDimensions";
 
-
-function Education({theme}) {
+function WorkHistory({  experience }) {
   const { width } = useWindowDimensions();
-
   return (
-    <ThemeProvider theme={theme}>
-      <Box>
-        <Box className="underline">
-          <Typography variant="h6" className="aboutHeaders">Motorola Solutions</Typography>
-        </Box>
-        <Box sx={{display: "flex", justifyContent: "space-between"}} className="aboutContent">
-          <Box>
-            <Typography className="aboutTextPadding">Mechanical Design Engineer</Typography>
-            <Typography className="aboutTextPadding">Vancouver, British Columbia</Typography>
-          </Box>
-          <Typography>May 2021 - Current</Typography>
-        </Box>
-        <ul>
-          <li><Typography className="aboutTextPadding">Work in a multi-disciplined team to develop commercial high-end security cameras</Typography></li>
-          {width > 768 ? <li><Typography className="aboutTextPadding">Coordinate with international suppliers to source and plan project timelines</Typography></li> : ""}
-        </ul>
+    <Box>
+      <Box className="underline">
+        <Typography variant="h6" className="aboutHeaders">
+          {experience.companyName}
+        </Typography>
       </Box>
-
-      <Box>
-        <Box className="underline">
-          <Typography variant="h6" className="aboutHeaders">WestMill Industries</Typography>
+      <Box
+        sx={{ display: "flex", justifyContent: "space-between" }}
+        className="aboutContent"
+      >
+        <Box>
+          <Typography className="aboutTextPadding">
+            {experience.jobTitle}
+          </Typography>
+          <Typography className="aboutTextPadding">
+            {experience.location}
+          </Typography>
         </Box>
-        <Box sx={{display: "flex", justifyContent: "space-between"}} className="aboutContent">
-          <Box>
-            <Typography className="aboutTextPadding">Mechanical Design Engineer</Typography>
-            <Typography className="aboutTextPadding"> Abbotsford, British Columbia</Typography>
-          </Box>
-          <Typography>May 2019​ - May 2021​</Typography>
-        </Box>
-        <Box sx={{display: "flex", justifyContent: "space-between"}} className="aboutContent">
-        <ul>
-          <li><Typography className="aboutTextPadding">Design large scale-forestry equipment and machinery</Typography></li>
-          {width > 768 ? <li><Typography className="aboutTextPadding">Creation of project plans with project managers</Typography></li> : ""}      
-        </ul>
-        </Box> 
+        <Typography>{experience.date}</Typography>
       </Box>
-
-      <Box>
-        <Box className="underline">
-          <Typography variant="h6" className="aboutHeaders">Modular Driven Technologies</Typography>
-        </Box>
-        <Box sx={{display: "flex", justifyContent: "space-between"}} className="aboutContent">
-          <Box>
-            <Typography className="aboutTextPadding">Design Engineer</Typography>
-            <Typography className="aboutTextPadding">Chilliwack, British Columbia</Typography>
-          </Box>
-          <Typography>May 2016​ - May 2019​</Typography>
-        </Box>
-        <ul>
-          <li><Typography className="aboutTextPadding">Design, sourcing and testing of consumer sporting goods</Typography></li>
-          {width > 768 ? <li><Typography className="aboutTextPadding">Manage projects for new products, lead design meetings and product kickoff meetings</Typography></li> : ""}          
-        </ul>
-      </Box>
-    </ThemeProvider>
-  )
+      <ul>
+        {experience.descriptions.map((description, index) => {
+          if (index > 0) {
+            return width > 768 ? (
+              <li>
+                <Typography className="aboutTextPadding">
+                  {description}
+                </Typography>
+              </li>
+            ) : null;
+          } else {
+            return (
+              <li>
+                <Typography className="aboutTextPadding">
+                  {description}
+                </Typography>
+              </li>
+            );
+          }
+        })}
+      </ul>
+    </Box>
+  );
 }
 
-export default Education;
-
+export default WorkHistory;

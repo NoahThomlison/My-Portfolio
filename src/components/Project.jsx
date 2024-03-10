@@ -1,59 +1,84 @@
-import {Typography, CardMedia, CardActions, CardContent, Button, Box, Link, Paper } from '@mui/material';
+import {
+  Typography,
+  CardMedia,
+  CardActions,
+  CardContent,
+  Button,
+  Box,
+  Link,
+  Paper,
+} from "@mui/material";
 
-function Project({width, project, index}) {
-
+function Project({ width, project, index }) {
   let techStackList = project.techStack.map((stack, index) => {
-    if(stack !== "Featured"){
-      if(index === project.techStack.length - 1){
-        return(stack)
+    if (stack !== "Featured") {
+      if (index === project.techStack.length - 1) {
+        return stack;
+      } else {
+        return stack + ", ";
       }
-      else{
-        return(stack + ", ")
-      }
-    }})
+    }
+  });
 
   return (
-    <Box className="project flip-card" >
+    <Box className="project flip-card">
       <Box className="flip-card-inner">
         <Box className="flip-card-front">
-        <CardContent>
-          <Typography gutterBottom variant="h6" component="div">
-            {project.title}
-          </Typography>
-        </CardContent>
+          <CardContent>
+            <Typography gutterBottom variant="h6" component="div">
+              {project.title}
+            </Typography>
+          </CardContent>
           <CardMedia
             className="projectImage"
             component="img"
-            image= {project.thumbnail[0]}
+            image={project.thumbnail[0]}
             alt="green iguana"
           />
         </Box>
         <Box className="flip-card-back">
           <CardContent>
-            <Typography gutterBottom variant="h6" component="div" className="flip-card-back-text">
+            <Typography
+              gutterBottom
+              variant="h6"
+              component="div"
+              className="flip-card-back-text"
+            >
               {project.title}
             </Typography>
-              <div>
-                <Typography variant="body2" color="text.secondary" className="flip-card-back-text">
-                  {project.description}
-                </Typography>
-              </div>
-            <Typography variant="body2" color="text.primary" className="flip-card-back-text">
-              <strong>Stack:</strong> {techStackList.map((stack, index) => {
-                return(stack)})}
+            <div>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                className="flip-card-back-text"
+              >
+                {project.description}
+              </Typography>
+            </div>
+            <Typography
+              variant="body2"
+              color="text.primary"
+              className="flip-card-back-text"
+            >
+              <strong>Stack:</strong>{" "}
+              {techStackList.map((stack, index) => {
+                return stack;
+              })}
             </Typography>
           </CardContent>
-          <Box sx={{position: "absolute", bottom: "0px"}}>
+          <Box sx={{ position: "absolute", bottom: "0px" }}>
             <CardActions>
               <Link href={project.githubLink} underline="none">
-              <Button size="small" variant="outlined">View on Github</Button>
+                <Button size="small" variant="outlined">
+                  View on Github
+                </Button>
               </Link>
             </CardActions>
           </Box>
         </Box>
       </Box>
     </Box>
-  )
+  );
 }
 
 export default Project;

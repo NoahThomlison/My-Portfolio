@@ -1,30 +1,40 @@
-import { Box, Typography, ThemeProvider} from '@mui/material';
+import { Box, Typography, ThemeProvider } from "@mui/material";
 
-function About({theme}) {
+function About({ theme }) {
   return (
     <ThemeProvider theme={theme}>
       <Box>
-        <Box className="underline" >
-        <Typography className="aboutHeaders" variant="h6">About me</Typography>
+        <Box className="underline">
+          <Typography className="aboutHeaders" variant="h6">
+            About me
+          </Typography>
         </Box>
         <Box className="aboutContent">
           <Typography>
-            I am a recent graduate of a Web Development Diploma program at <a href="https://www.lighthouselabs.ca/">Lighthouse Labs</a>. I also have a Bachelor's Degree Mechanical Engineering from the <a href="https://www.bcit.ca/programs/mechanical-engineering/">British Columbia Institute of Technology</a>.
+            I'm passionate software developer currently working to help build
+            the online experience at{" "}
+            <a href="https://commerce7.com/">Commerce7</a>.
           </Typography>
           <br></br>
           <Typography>
-            Before attending Lighthouse Labs I have worked as a Mechanical Design Engineer for 5 years. Some projects I have been involved in include sporting goodmotorcycle accessories, machinery and commercial cameras. I decided to make a pivot from Mechanical Engineering to Web Development as I found the speed aability to rapidly iterate and design when doing coding is I greatly enjoy.
-          </Typography>          
+            With a foundation in mechanical engineering, my journey into the
+            tech world began with a degree that fueled my curiosity for
+            problem-solving. I decided to switch career paths and earned a
+            diploma in web development, merging the precision of engineering
+            with the creativity of coding.
+          </Typography>
           <br></br>
           <Typography>
-           In my free time, I am continuing my studies by learning Python and Django, practicing to hone my skills further in React and refactoring my midterm projectSmart-To-Do list, to add new functionality. 
+            My professional adventure spans three years in software development,
+            and five years in the mechanical engineering. During my time in
+            Mechanical Engineering, I have designed consumer goods and led and
+            managed projects.
           </Typography>
+          <br></br>
         </Box>
       </Box>
     </ThemeProvider>
-
-  )
+  );
 }
-
 
 export default About;
